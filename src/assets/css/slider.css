@@ -1,0 +1,91 @@
+@media only screen and (max-width: 800px) {
+    .hero-slide{
+        height: 35vh !important;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .slide-image{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-slider .content{
+        position: absolute;
+        margin-top: 25vh;
+        margin-left: 0vw;
+        color: white;
+        z-index: 100;
+    }
+
+    .imag{
+        width: 100%;
+        height: 35vh;
+    }
+
+    .card{
+        position: relative;
+        margin-top: 5vh;
+        /* margin-bottom: 30vh; */
+        width: 100%;
+    }
+
+    .btngal{
+        margin-left: 28.5vw;
+        margin-top: 5vh;
+    }
+}    
+
+@media only screen and (min-width: 800px) {
+    .hero-slide{
+        height: 70vh !important;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .slide-image{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-slider .content{
+        position: absolute;
+        margin-top: 60vh;
+        margin-left: 20vw;
+        color: white;
+        z-index: 100;
+    }
+
+    .imag{
+        width: 100%;
+        height: 70vh;
+    }
+
+    .card{
+        position: relative;
+        margin-left: 19vw;
+        margin-bottom: 20vh;
+        width: 60%;
+    }
+
+    .btngal{
+        margin-left: 25.5vw;
+        margin-top: 5vh;
+    }
+}    

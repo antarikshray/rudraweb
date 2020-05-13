@@ -1,0 +1,81 @@
+{
+  "homepage": "http://antarikshray.github.io/rudrawebsite",
+  "name": "material-kit-react",
+  "version": "1.8.0",
+  "description": "Material Kit React. Coded by Creative Tim",
+  "private": true,
+  "main": "dist/index.js",
+  "dependencies": {
+    "@material-ui/core": "4.3.2",
+    "@material-ui/icons": "4.2.1",
+    "@mui-treasury/layout": "^3.3.4",
+    "@mui-treasury/styles": "^1.1.0",
+    "classnames": "2.2.6",
+    "history": "4.9.0",
+    "moment": "2.24.0",
+    "node-sass": "4.12.0",
+    "nouislider": "14.0.2",
+    "prop-types": "15.7.2",
+    "react": "16.9.0",
+    "react-awesome-slider": "^4.1.0",
+    "react-datetime": "2.16.3",
+    "react-device-detect": "^1.12.1",
+    "react-dom": "16.9.0",
+    "react-facebook": "^8.1.4",
+    "react-fontawesome": "^1.7.1",
+    "react-horizontal-timeline": "^1.5.3",
+    "react-hover": "^1.4.0",
+    "react-id-swiper": "^3.0.0",
+    "react-instagram-embed": "^1.5.0",
+    "react-loading": "^2.0.3",
+    "react-parallax": "^3.0.3",
+    "react-player": "^1.15.3",
+    "react-router-dom": "5.0.1",
+    "react-scripts": "3.1.0",
+    "react-scroll": "^1.7.16",
+    "react-slick": "0.25.2",
+    "react-swipeable-views": "0.13.3",
+    "react-text-transition": "^1.0.2",
+    "swiper": "^5.3.7",
+    "webfontloader": "^1.6.28"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.5.5",
+    "@babel/plugin-proposal-class-properties": "7.5.5",
+    "@babel/preset-env": "7.5.5",
+    "@babel/preset-react": "7.0.0",
+    "eslint-config-prettier": "6.0.0",
+    "eslint-plugin-prettier": "3.1.0",
+    "eslint-plugin-react": "7.14.3",
+    "gulp": "4.0.2",
+    "gulp-append-prepend": "1.0.8",
+    "prettier": "1.18.2"
+  },
+  "optionalDependencies": {
+    "typescript": "3.5.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build && gulp licenses",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "lint:check": "eslint . --ext=js,jsx;  exit 0",
+    "lint:fix": "eslint . --ext=js,jsx --fix;  exit 0",
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
+    "build-package-css": "node-sass src/assets/scss/material-kit-react.scss dist/material-kit-react.css",
+    "build-package": "npm run build-package-css && babel src --out-dir dist",
+    "compile-sass": "node-sass src/assets/scss/material-kit-react.scss src/assets/css/material-kit-react.css",
+    "minify-sass": "node-sass src/assets/scss/material-kit-react.scss src/assets/css/material-kit-react.min.css --output-style compressed",
+    "map-sass": "node-sass src/assets/scss/material-kit-react.scss src/assets/css/material-kit-react.css --source-map true"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": []
+  }
+}

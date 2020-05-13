@@ -1,0 +1,61 @@
+@media only screen and (min-width: 800px) {
+    .mainimg{
+        clip-path: circle(74.2% at 50% 26%);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .mainimg{
+        clip-path: circle(74.2% at 50% 26%);
+        height: 40vh;
+    }
+}
+
+@font-face {
+    font-family: "army";
+    font-weight: bold;
+    font-color: "#00000";
+    src: url("../fonts/Army_Buster.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "gotham";
+    font-color: "#00000";
+    src: url("../fonts/Gotham Ultra.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "cairoBlack";
+    font-color: "#00000";
+    src: url("../fonts/Cairo-Black.ttf") format("truetype");
+}
+@font-face {
+    font-family: "cairoLight";
+    font-color: "#00000";
+    src: url("../fonts/Cairo-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "nordi";
+    font-weight: bold;
+    font-color: #ffffff;
+    src: url("../fonts/nordique-Light.otf") format("opentype");
+}
+
+.heade{
+    font-family: "pfeifer";
+    position: 'absolute';
+    color: "#ffffff";
+    z-index: "1000";
+    margin-left: "15vw";
+}
+
+.tit1{
+    font-family: "nordi";    
+}
+
+.timelinesubs{
+   color: "#ffffff";
+   position: 'absolute';
+   margin-left: '20vw';
+}
