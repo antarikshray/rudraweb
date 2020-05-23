@@ -85,9 +85,12 @@ export default function FullWidthGrid() {
             <h2 className={classes.Name}> David Chaudhary</h2>
             <h4 className={classes.Design}> Technical Director</h4>
           </Grid>
-          <Button className={classes.btnclass} color="primary" size="lg" round>
+          <div id='teambutton' className={classes.btn}>
+            {/* //////////////////////////// the  button animation is controlled in SectionSponsorship component*/}
+          <Button color="primary" size="lg" round>
             TEAM HISTORY
         </Button>
+        </div>
         </Grid>
         <Grid container spacing={3}>
           <Grid className={classes.box} item xs={10} sm={2}>

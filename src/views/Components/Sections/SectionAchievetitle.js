@@ -28,7 +28,7 @@ export default function AchieveTitle(props) {
         ////////////////////////////resize event///////////////////////////
         function handleResize() {
           setWindowDimensions(getWindowDimensions());
-          console.log(windowDimensions.width);
+          // console.log(windowDimensions.width);
         }
         window.addEventListener('resize', handleResize);
 

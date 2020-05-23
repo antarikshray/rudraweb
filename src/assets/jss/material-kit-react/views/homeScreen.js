@@ -10,6 +10,8 @@ const componentsStyle = {
     zIndex: "5",
     marginLeft: "30vw",
     marginTop: "2vh",
+    height: "20vh",
+    overflowY: "hidden",
   },
   load1: {
     position: 'fixed',
@@ -91,9 +93,11 @@ const componentsStyle = {
       fontWeight: "600",
       display: "inline-block",
       position: "relative",
+      transition: "1500ms ease-in-out",
       textStrokeWidth: '3px',
       textStrokeColor: 'white',
-      textFillColor: 'transparent'
+      textFillColor: 'transparent',
+      marginTop: '50vh'
     },
     subtitle: {
       fontSize: "1vw",

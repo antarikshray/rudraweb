@@ -30,6 +30,8 @@ import SectionTeam from "./Sections/SectionTeam.js";
 import AchieveTitle from "./Sections/SectionAchievetitle.js";
 import SectionNews from "./Sections/SectionNews.js";
 import SectionSocial from "./Sections/SectionSocial.js";
+import SectionSponsorship from "./Sections/SectionSponsorship.js";
+import SectionPatreons from "./Sections/SectionPatreons.js";
 
 import parall from "assets/img/2k20Team.webp";
 import image from "assets/img/mkbhd1.gif";
@@ -75,14 +77,17 @@ export default function Homepage(props) {
     setTimeout(function () {
       document.getElementById('load1').style.width = '0px';
       document.getElementById('load2').style.height = '0px';
-    }, 2500);
+    }, 2000);
     setTimeout(function () {
       document.getElementById('load3').style.height = '0px';
-    }, 3500);
+    }, 3000);
+    setTimeout(function () {
+      document.getElementById('mainbrand').style.marginTop = '5vh';
+    }, 4000);
   });
 
   return (
-    <div style={{cursor: 'alias'}}>
+    <div>
       <div id="load1" className={classes.load1}>
       </div>
       <div id="load2" className={classes.load2}>
@@ -99,11 +104,11 @@ export default function Homepage(props) {
         <Arrowd id="pral" className={classes.arrow1} />
       </Link>
       <div className={classes.brand}>
-                  <h1 className={classes.title}>SRM TEAM RUDRA</h1>
-                  {/* <h3 className={classes.subtitle}>
+        <h1 id="mainbrand" className={classes.title}>SRM TEAM RUDRA</h1>
+        {/* <h3 className={classes.subtitle}>
                   - Design Build Innovate
                   </h3> */}
-        </div>
+      </div>
       <Parallax className={classes.mainimg} image={parall}></Parallax>
 
       {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -136,9 +141,15 @@ export default function Homepage(props) {
         <section id='social'>
           <SectionSocial />
         </section>
-        {/* <SectionLogin /> */}
-        {/* <SectionBasics /> */}
-        {/* <SectionNavbars />
+        <section id='sponsorship'>
+          <SectionSponsorship />
+        </section>
+        <section id='patreons'>
+          <SectionPatreons />
+        </section>
+      {/* <SectionLogin /> */}
+      {/* <SectionBasics /> */}
+      {/* <SectionNavbars />
           <SectionNotifications />
           <SectionJavascript />
           <SectionCompletedExamples />
@@ -151,9 +162,9 @@ export default function Homepage(props) {
           </GridItem>
           <SectionExamples />
           <SectionDownload /> */}
-      </div>
-      {/* <Footer /> */}
     </div>
+      {/* <Footer /> */ }
+    </div >
   );
 
 }

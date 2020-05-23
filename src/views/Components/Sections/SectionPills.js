@@ -38,7 +38,7 @@ export default function SectionPills() {
         ////////////////////////////resize event///////////////////////////
         function handleResize() {
           setWindowDimensions(getWindowDimensions());
-          console.log(windowDimensions.width);
+          // console.log(windowDimensions.width);
         }
         window.addEventListener('resize', handleResize);
 

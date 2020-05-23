@@ -1,0 +1,136 @@
+.container {
+    position: relative;
+    height: 390vh;
+    background-color: #6C44D2;
+    transition: 1s ease-in-out;
+}
+.title {
+    position: absolute;
+    font-size: 15vh;
+    left: 5.5vw;
+    top: 10vh;
+    color: #00F8C8;
+}
+
+.titleFont{
+    font-size: 10vh; 
+    font-weight: 100px;
+}
+
+.titleDuring {
+    position : fixed;
+    font-size: 15vh;
+    left : 7vw;
+    top : 45vh;
+    color: #00F8C8;
+}
+
+.titleAfter {
+    position : absolute;
+    font-size: 15vh;
+    left : 5.4vw;
+    top : 102.5vh;
+    color: #00F8C8;
+}
+.wheeleez {
+    position: absolute;
+    /* background-color: #E0E1EE; */
+    margin-left: 40vw;
+    margin-top: 8vh;
+    width: 55vw;
+    height: 30vh;
+}
+.nvidia{
+    position: absolute;
+    margin-left: 40vw;
+    margin-top: 50vh;
+    width: 55vw;
+    height: 30vh;
+}
+.anet{
+    position: absolute;
+    margin-left: 40vw;
+    margin-top: 90vh;
+    width: 55vw;
+    height: 30vh;
+}
+.wheeleezimag{
+    margin-left: 15vw;
+}
+.nvidiaimag {
+    margin-left: 30vw;
+}
+
+.anetimag{
+    margin-left: 35vw;
+}
+
+.horisponsor{
+    border: 2px solid #E0E1EE;
+    margin-top: 5vh;
+}
+.title2 {
+    position: absolute;
+    font-size: 15vh;
+    right: 5vw;
+    color: #00F8C8;
+}
+.titlePDuring {
+    position : fixed;
+    font-size: 15vh;
+    right : 6.6vw;
+    top : 40.8vh;
+    color: #00F8C8;
+}
+
+.titlePAfter {
+    position : absolute;
+    font-size: 15vh;
+    right : 5vw;
+    top : 329.5vh;
+    color: #00F8C8;
+}
+
+.vectorInk{
+    position: absolute;
+    margin-left: 1vw;
+    margin-top: 8vh;
+    width: 55vw;
+    height: 30vh;
+}
+.inceptionwave{
+    position: absolute;
+    margin-left: 1vw;
+    margin-top: 58vh;
+    width: 55vw;
+    height: 30vh;
+}
+.vectorimag{
+    margin-left: 5vw;
+}
+.vectortitle{
+    position: absolute;
+    color: #E0E1EE;
+    margin-left: 30vw;
+}
+.horipartner{
+    border: 2px solid #E0E1EE;
+    margin-top: 10vh;
+}
+.monster{
+    position: absolute;
+    margin-left: 1vw;
+    margin-top: 108vh;
+    width: 55vw;
+    height: 30vh;
+}
+
+.button{
+    position: absolute;
+    left: 44vw;
+    bottom: 20vh;
+    transition: 1s ease-in-out;
+    width: '0px';
+    height: '10vh';
+    overflow: hidden;
+}

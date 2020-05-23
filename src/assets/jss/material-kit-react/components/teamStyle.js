@@ -31,11 +31,6 @@ const teamStyle = {
       height: '18vh',
       width: '9vw',
     },
-    btnclass: {
-      position: 'absolute',
-      marginLeft: '77vw',
-      marginTop: '20vh',
-    },
     title: {
       marginLeft: '42vw'
     },
@@ -53,6 +48,14 @@ const teamStyle = {
       transition: '1s',
       color: '#fff',
     },
+    btn: {
+      position: 'absolute',
+      marginLeft: '77vw',
+      marginTop: '20vh',
+      width: '0vh',
+      overflow: 'hidden',
+      transition: '2s ease-in-out'
+    }
   },
   '@media (max-width: 800px)': {
     root: {
