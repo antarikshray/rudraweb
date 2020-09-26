@@ -101,7 +101,7 @@ const vidplayaStyle ={
             borderLeft: '15px solid #4f00a8'
         },
     },
-    '@media (max-width: 800px)': {
+    '@media (max-width: 1030px)': {
         vidCard: {
             marginBottom: '10vh',
             height: '90vh',

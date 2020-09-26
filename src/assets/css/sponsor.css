@@ -21,15 +21,15 @@
     position : fixed;
     font-size: 15vh;
     left : 7vw;
-    top : 45vh;
+    top : 33vh;
     color: #00F8C8;
 }
 
 .titleAfter {
     position : absolute;
     font-size: 15vh;
-    left : 5.4vw;
-    top : 102.5vh;
+    left : 5.5vw;
+    top : 100vh;
     color: #00F8C8;
 }
 .wheeleez {
@@ -79,7 +79,7 @@
     position : fixed;
     font-size: 15vh;
     right : 6.6vw;
-    top : 40.8vh;
+    top : 42vh;
     color: #00F8C8;
 }
 
@@ -87,7 +87,7 @@
     position : absolute;
     font-size: 15vh;
     right : 5vw;
-    top : 329.5vh;
+    top : 333.5vh;
     color: #00F8C8;
 }
 

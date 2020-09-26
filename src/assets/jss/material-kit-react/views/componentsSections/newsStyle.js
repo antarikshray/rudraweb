@@ -5,277 +5,201 @@ import sparkfun from "assets/img/image/news/sparkfun.webp";
 import { isParenthesizedExpression } from "typescript";
 
 const newsStyle = {
-    '@media (max-width: 800px)': {
-        container:{
-            height: '90vh',
-            width: '91vw',
-            overflow: 'hidden',
-        },
-        title: {
-            fontFamily: 'cairoBlack',
-            position: 'absolute',
-            color: '#fff',
-            marginTop: '5vh',
-            marginLeft: '30vw',
-            fontSize: '50px',
-            fontWeight: '400',
-            textStrokeWidth: '3px',
-            textStrokeColor: '#fff',
-            textFillColor: 'transparent',
-            zIndex: '20',
-        },
-        video :{
-            height: '100%',
-            zIndex: '10'
-        },
-        wrapper:{
-            fontFamily: 'cairoLight',
-            color: 'white',
-            fontSize: '12px',
-            marginLeft: '15px',
-            marginTop: '60px',
-        },
-        wrapper2: {
-            fontSize: '20px',
-            marginLeft: '25px',
-            marginTop: '210px',
-        },
-        section1: {
-            position: 'absolute',
-            marginLeft: '4vw',
-            marginTop: '-75vh',
-            height: '30vh',
-            width: '82vw',
-            zIndex: '100',
-            borderRadius: '2%',
-            boxShadow: '3px 3px 7px 7px #888888',
-            backgroundImage:'linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.72)), url('+ rudrawin +')',
-            backgroundSize:'cover',
-        },
-            section2: {
-                position: 'absolute',
-                marginLeft: '4vw',
-                marginTop: '-38vh',
-                height: '13vh',
-                width: '40vw',
-                zIndex: '100',
-                borderRadius: '2%',
-                boxShadow: '3px 3px 7px 7px #888888',
-                backgroundImage:'linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.72)), url('+ urcupdate +')',
-                backgroundSize:'cover',
-            },
-            section3: {
-                position: 'absolute',
-                marginLeft: '48vw',
-                marginTop: '-38vh',
-                height: '13vh',
-                width: '38vw',
-                zIndex: '100',
-                borderRadius: '2%',
-                boxShadow: '3px 3px 7px 7px #888888',
-                backgroundImage:'linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.72)), url('+ anet +')',
-                backgroundSize:'cover',
-            },
-            section4: {
-                position: 'absolute',
-                marginLeft: '4vw',
-                marginTop: '-22vh',
-                height: '13vh',
-                width: '38vw',
-                zIndex: '100',
-                borderRadius: '2%',
-                boxShadow: '3px 3px 7px 7px #888888',
-                backgroundImage:'linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.72)), url('+ sparkfun +')',
-                backgroundSize:'cover',
-            },
-            section5: {
-                position: 'absolute',
-                marginLeft: '48vw',
-                marginTop: '-22vh',
-                height: '13vh',
-                width: '38vw',
-                zIndex: '100',
-                borderRadius: '2%',
-                boxShadow: '3px 3px 7px 7px #888888',
-                backgroundImage:'linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.72)), url('+ sparkfun +')',
-                backgroundSize:'cover',
-            },
-            downvote: {
-                position: 'absolute',
-                marginLeft: '37vw',
-                marginTop: '-7vh',
-                height: '50px',
-                width: '50px',
-                zIndex: '10000',
-              },
-            arrow: {
-                  width: "50px",
-                  height: "50px",
-                  marginLeft: "8px",
-                  transition: '1s',
-                  color: '#ffffdd',
-            },
+    container: {
+        display: "flex",
+        flexDirectiob: 'column',
+        alignItems: "center",
+        justifyContent: "space-around",
+        flexWrap: 'wrap',
+        height: '100vh',
+        width: '96vw'
     },
-
-    '@media (min-width: 800px)': {
-        container:{
-            height: '110vh',
-            width: '96vw'
+    vidBG: {
+        position: 'absolute',
+        height: '100vh'
+    },
+    video: {
+        height: '100%',
+        zIndex: '-1'
+    },
+    first: {
+       position: 'absolute'
+    },
+    second: {
+        position: 'absolute'
+    },
+    third: {
+        position: 'absolute'
+    },
+    title: {
+        order: '2',
+        fontFamily: 'cairoBlack',
+        color: '#fff',
+        fontSize: '10vw',
+        fontWeight: '400',
+        textStrokeWidth: '5px',
+        textStrokeColor: '#fff',
+        textFillColor: 'transparent',
+        zIndex: '20'
+    },
+    news1: {
+        order: '1',
+        width: '25vw',
+        backgroundColor: '#000',
+        zIndex: '100',
+        color: 'transparent',
+        borderRadius: "6px",
+        boxShadow: "0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)",
+        transition: '250ms ease-in-out',
+        transformOrigin: 'top',
+        '&:hover': {
+            transform: 'scale(1.2)',
+            backgroundImage: 'linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.72))',
+            zIndex: '200',
+            color: 'white',
         },
-        video :{
-            position: 'absolute',
-            width: '100%', 
-            zIndex: '10'
+    },
+    news2: {
+        order: '3',
+        width: '25vw',
+        backgroundColor: '#000',
+        zIndex: '100',
+        color: 'transparent',
+        borderRadius: "6px",
+        boxShadow: "0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)",
+        transition: '250ms ease-in-out',
+        transformOrigin: 'top',
+        '&:hover': {
+            transform: 'scale(1.2)',
+            backgroundImage: 'linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.72))',
+            zIndex: '200',
+            color: 'white',
+        },
+    },
+    news3: {
+        order: '4',
+        width: '25vw',
+        backgroundColor: '#000',
+        zIndex: '100',
+        color: 'transparent',
+        borderRadius: "6px",
+        boxShadow: "0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)",
+        transition: '250ms ease-in-out',
+        transformOrigin: 'top',
+        '&:hover': {
+            transform: 'scale(1.2)',
+            backgroundImage: 'linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.72))',
+            zIndex: '200',
+            color: 'white',
+        },
+    },
+    news4: {
+        order: '5',
+        width: '25vw',
+        backgroundColor: '#000',
+        zIndex: '100',
+        color: 'transparent',
+        borderRadius: "6px",
+        boxShadow: "0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)",
+        transition: '250ms ease-in-out',
+        transformOrigin: 'top',
+        '&:hover': {
+            transform: 'scale(1.2)',
+            backgroundImage: 'linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.72))',
+            zIndex: '200',
+            color: 'white',
+        },
+    },
+    news5: {
+        order: '6',
+        width: '25vw',
+        backgroundColor: '#000',
+        zIndex: '100',
+        color: 'transparent',
+        borderRadius: "6px",
+        boxShadow: "0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)",
+        transition: '250ms ease-in-out',
+        transformOrigin: 'top',
+        '&:hover': {
+            transform: 'scale(1.2)',
+            backgroundImage: 'linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.72))',
+            zIndex: '200',
+            color: 'white',
+        },
+    },
+    '@media (max-width: 1024px) and (min-width: 800px)': {
+        title: {
+            order: '1',
+            textStrokeWidth: '2px'
+        },
+        news1:{
+            order: '3',
+            width: '38vw'
+        },
+        news2: {
+            order: '5',
+            width: '38vw'
+        },
+        news3: {
+            order: '6',
+            width: '38vw'
+        },
+        news4: {
+            order: '8',
+            width: '38vw'
+        },
+        news5: {
+            order: '9',
+            width: '38vw'
+        },
+        first: {
+            position: 'relative',
+            order: '2',
+            flexBasis: '100%'
+        },
+        second: {
+            position: 'relative',
+            order: '4',
+            flexBasis: '100%'
+        },
+        third: {
+            position: 'relative',
+            order: '7',
+            flexBasis: '100%'
+        }
+    },
+    '@media (max-width: 800px)': {
+        container: {
+            height: '80vh'
+        },
+        vidBG: {
+            height: '80vh'
         },
         title: {
-            fontFamily: 'cairoBlack',
-            position: 'absolute',
-            color: '#fff',
-            marginTop: '5vh',
-            marginLeft: '33vw',
-            fontSize: '200px',
-            fontWeight: '400',
-            textStrokeWidth: '5px',
-            textStrokeColor: '#fff',
-            textFillColor: 'transparent',
-            zIndex: '20'
+            textStrokeWidth: '2px'
         },
-        wrapper:{
-            fontFamily: 'cairoLight',
-            fontSize: '30px',
-            marginLeft: '10px',
-            marginTop: '250px',
+        news1:{
+            order: '3',
+            width: '35vw'
         },
-        section1: {
-            position: 'absolute',
-            marginLeft: '5vw',
-            marginTop: '10vh',
-            height: '35vh',
-            width: '25vw',
-            backgroundColor: '#000',
-            zIndex: '100',
-            color: 'transparent',
-            borderRadius: '2%',
-            boxShadow: '3px 3px 7px 7px #888888',
-            transition: '500ms ease-in-out',
-            transformOrigin: 'top',
-            backgroundImage:'url('+ rudrawin +')',
-            // backgroundImage:'linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73))',
-            backgroundSize:'cover',
-            '&:hover' : {
-                transform: 'scale(1.2)',
-                backgroundImage:'linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.72)), url('+ rudrawin +')',
-                zIndex: '200',
-                color: 'white',
-            },
+        news2: {
+            order: '5',
+            width: '35vw'
         },
-        section2: {
-            position: 'absolute',
-            marginLeft: '65vw',
-            marginTop: '10vh',
-            height: '35vh',
-            width: '25vw',
-            backgroundColor: '#000',
-            zIndex: '100',
-            color: 'transparent',
-            borderRadius: '2%',
-            boxShadow: '3px 3px 7px 7px #888888',
-            transition: '500ms ease-in-out',
-            transformOrigin: 'top',
-            backgroundImage:'url('+ urcupdate +')',
-            // backgroundImage:'linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73))',
-            backgroundSize:'cover',
-            '&:hover' : {
-                transform: 'scale(1.2)',
-                backgroundImage:'linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.72)), url('+ urcupdate +')',
-                zIndex: '200',
-                color:'white'
-            },
+        news3: {
+            order: '6',
+            width: '35vw'
         },
-        section3: {
-            position: 'absolute',
-            marginLeft: '8vw',
-            marginTop: '60vh',
-            height: '40vh',
-            width: '20vw',
-            backgroundColor: '#000',
-            zIndex: '100',
-            color: 'transparent',
-            borderRadius: '2%',
-            boxShadow: '3px 3px 7px 7px #888888',
-            transition: '500ms ease-in-out',
-            transformOrigin: 'bottom left',
-            backgroundImage:'url('+ anet +')',
-            // backgroundImage:'linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73))',
-            backgroundSize:'cover',
-            '&:hover' : {
-                transform: 'scale(1.2)',
-                backgroundImage:'linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.72)), url('+ anet +')',
-                zIndex: '200',
-                color:'white'
-            },
+        news4: {
+            order: '8',
+            width: '35vw'
         },
-        section4: {
-            position: 'absolute',
-            marginLeft: '38vw',
-            marginTop: '60vh',
-            height: '40vh',
-            width: '20vw',
-            backgroundColor: '#000',
-            zIndex: '100',
-            color: 'transparent',
-            borderRadius: '2%',
-            boxShadow: '3px 3px 7px 7px #888888',
-            transition: '500ms ease-in-out',
-            transformOrigin: 'bottom',
-            backgroundImage:'url('+ sparkfun +')',
-            // backgroundImage:'linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73))',
-            backgroundSize:'cover',
-            '&:hover' : {
-                transform: 'scale(1.2)',
-                backgroundImage:'linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.72)), url('+ sparkfun +')',
-                zIndex: '200',
-                color:'white'
-            },
-        },
-        section5: {
-            position: 'absolute',
-            marginLeft: '68vw',
-            marginTop: '60vh',
-            height: '40vh',
-            width: '20vw',
-            backgroundColor: '#000',
-            zIndex: '100',
-            color: 'transparent',
-            borderRadius: '2%',
-            boxShadow: '3px 3px 7px 7px #888888',
-            transition: '500ms ease-in-out',
-            transformOrigin: 'bottom right',
-            backgroundImage:'url('+ sparkfun +')',
-            // backgroundImage:'linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73))',
-            backgroundSize:'cover',
-            '&:hover' : {
-                transform: 'scale(1.2)',
-                backgroundImage:'linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.72)), url('+ sparkfun +')',
-                zIndex: '200',
-                color:'white'
-            },
-        },
-        downvote: {
-            position: 'absolute',
-            marginLeft: '45.3vw',
-            marginTop: '40vh',
-            height: '50px',
-            width: '50px',
-            zIndex: '10000',
-        },
-        arrow: {
-            width: "100px",
-            height: "100px",
-            transition: '1s',
-            color: '#fff',
+        news5: {
+            order: '9',
+            width: '35vw'
         },
     }
+
 }
 
 export default newsStyle;

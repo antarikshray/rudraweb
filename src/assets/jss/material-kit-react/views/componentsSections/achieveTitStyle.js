@@ -1,91 +1,126 @@
 
 const achieveTitStyle = {
+    imageWrapper: {
+        position: 'absolute',
+        margin: '10vw 0 10vw 0',
+        height: '70vh',
+        width: '100%',
+        zIndex: '15',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    imag: {
+        width: '34.5vw'
+    },
+    downvote: {
+        position: 'absolute',
+        marginTop: '90vh',
+        height: '10vh',
+        width: '100%',
+        zIndex: '10000',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    arrow: {
+        fontSize: '10vw',
+        transition: '1s',
+        color: '#787276',
+    },
+    section:{
+        backgroundColor: "#d6d6d6",
+        height: '100vh'
+    },
+    achieve: {
+        position: 'absolute',
+        margin: '25vw 0 0 5vw',
+        fontSize: '12vw',
+        fontWeight: "600",
+        textStrokeWidth: '3px',
+        textStrokeColor: '#787276',
+        textFillColor: 'transparent',
+        zIndex: '20',
+    },
+    achieveb: {
+        position: 'absolute',
+        margin: '25vw 0 0 5vw',
+        fontSize: '12vw',
+        fontWeight: "600",
+        textStrokeWidth: '3px',
+        textStrokeColor: '#787276',
+        textFillColor: '#787276',
+        zIndex: '10',
+    },
+    '@media (max-width: 1024px)': {
+        section:{
+            backgroundColor: "#d6d6d6",
+            height: '30vh'
+        },
+        achieve: {
+            margin: '18vw 1vw 0 2vw',
+            textStrokeWidth: '2px'
+        },
+        achieveb: {
+            margin: '18vw 1vw 0 1vw',
+            textStrokeWidth: '2px',
+        },
+        imageWrapper: {
+            position: 'absolute',
+            marginTop: '-1vh',
+            // margin: '10vw 0 10vw 0',
+            height: '30vh',
+            width: '100%',
+            zIndex: '15',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+        },
+        downvote: {
+            position: 'absolute',
+            marginTop: '25vh',
+            height: '10vh',
+            width: '100%',
+            zIndex: '10000',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+        }
+    },
     '@media (max-width: 800px)': {
         section:{
-            display: "flex",
-            height: "85vh"
+            backgroundColor: "#d6d6d6",
+            height: '30vh'
         },
         achieve: {
-            margin: '35vh 0 5vh 12vw',
-            fontSize: '10vw',
-            textStrokeWidth: '1px',
-            fontWeight: "600",
-            textStrokeColor: '#787276',
-            textFillColor: 'transparent',
-            zIndex: '20',
+            margin: '25vw 1vw 0 1vw',
+            textStrokeWidth: '2px'
         },
         achieveb: {
-            position: 'absolute',
-            margin: '35vh 0 5vh 12vw',
-            fontSize: '10vw',
-            fontWeight: "600",
-            textStrokeWidth: '1px',
-            textStrokeColor: '#787276',
-            textFillColor: '#787276',
-            zIndex: '10'
+            margin: '25vw 0 0 0',
+            textStrokeWidth: '2px',
         },
-          imag: {
+        imageWrapper: {
             position: 'absolute',
-            margin: '30vh 0 0 28vw',
-            width: '20vh',
+            marginTop: '-1vh',
+            // margin: '10vw 0 10vw 0',
+            height: '30vh',
+            width: '100%',
             zIndex: '15',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
         },
         downvote: {
             position: 'absolute',
-            marginLeft: '43vw',
-            marginTop: '80vh',
-            height: '50px',
-            width: '50px',
+            marginTop: '25vh',
+            height: '10vh',
+            width: '100%',
             zIndex: '10000',
-          },
-      
-          arrow: {
-            width: "50px",
-            height: "50px",
-            transition: '1s',
-            color: '#787276',
-          },
-    },
-    '@media (min-width: 800px)': {
-        imag: {
-            position: 'absolute',
-            margin: '20vh 0 40vh 30vw',
-            height: '70vh',
-            zIndex: '15',
-        },
-        achieve: {
-            margin: '40vh 0 40vh 5vw',
-            fontSize: '20vh',
-            fontWeight: "600",
-            textStrokeWidth: '3px',
-            textStrokeColor: '#787276',
-            textFillColor: 'transparent',
-            zIndex: '20',
-        },
-        achieveb: {
-            position: 'absolute',
-            margin: '40vh 0 40vh 5vw',
-            fontSize: '20vh',
-            fontWeight: "600",
-            textStrokeWidth: '3px',
-            textStrokeColor: '#787276',
-            textFillColor: '#787276',
-            zIndex: '10'
-        },
-        downvote: {
-            position: 'absolute',
-            marginLeft: '49vw',
-            marginTop: '90vh',
-            height: '50px',
-            width: '50px',
-            zIndex: '10000',
-        },
-        arrow: {
-            width: "100px",
-            height: "100px",
-            transition: '1s',
-            color: '#787276',
-        },
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+        }
     }
 };
 

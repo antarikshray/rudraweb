@@ -13,7 +13,7 @@ export default function Quote(props) {
   const classes = useStyles();
   return (
     <blockquote className={classes.defaultFontStyle + " " + classes.quote}>
-      <p className={classes.quoteText}>{text}</p>
+      <p className={classes.quoteText} style={props.stylet}>{text}</p>
       <small className={classes.quoteAuthor}>{author}</small>
     </blockquote>
   );

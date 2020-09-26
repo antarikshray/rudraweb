@@ -1,0 +1,25 @@
+.container{
+    height: 100vh;
+    background-color: #1E6F79;
+}
+
+.titleContainer{
+    display: flex;
+    padding-top: 5vh;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+    color: #FFAC62;
+}
+
+.address{
+    margin-top: 1000px;
+    height: 50vh;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.homeIcon{
+    height: 5vh;
+}

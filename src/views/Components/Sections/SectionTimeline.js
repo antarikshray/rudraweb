@@ -1,103 +1,120 @@
-import React, { useState } from "react";
-import HorizontalTimeline from 'react-horizontal-timeline';
-import { makeStyles } from "@material-ui/core/styles";
-import { Link, animateScroll as scroll } from "react-scroll";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Typography from '@material-ui/core/Typography';
 
-import SectionMediaCard from "./SectionAchievement.js";
-import Arrowd from "@material-ui/icons/ArrowDropDown";
+//load the medias
+import img1 from "assets/img/image/rovers/2013.webp";
+import img2 from "assets/img/image/rovers/2014.webp";
+import img3 from "assets/img/image/rovers/2015.webp";
+import img4 from "assets/img/image/rovers/2016.webp";
+import img5 from "assets/img/image/rovers/2017.webp";
+import img6 from "assets/img/image/rovers/2019.webp";
+import img7 from "assets/img/image/rovers/2020-irc.webp";
 
-import "assets/css/my.css";
 
-const VALUES = ['May 28 2013', 'May 31 2014', 'May 31 2015', 'May 30 2016', 'May 30 2017', 'May 31 2019', 'Jan 17 2020'];
-const pallete = [];
-
-const useStyles = makeStyles(() => ({
-  '@media (max-width: 800px)': {
-    container: {
-      height: '95vh',
-      backgroundColor: '#EFEFED',
-      zIndex: '10'
-    },
-    card:{
-      paddingTop: '5vh',
-      width: '90vw',   
-      height: '73vh', 
-    },
-    downvote: {
-      position: 'absolute',
-      marginLeft: '37vw',
-      marginTop: '90vh',
-      height: '50px',
-      width: '50px',
-      zIndex: '10000',
-    },
-    arrow: {
-        width: "50px",
-        height: "50px",
-        marginLeft: "8px",
-        transition: '1s',
-        color: '#737373',
-    },
+const useStyles = makeStyles({
+  root: {
+    marginTop: '10vh',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    backgroundColor: '#D4D7DC',
+    width: '40vw',
+    height: '67vh',
+  },
+  media: {
+    height: '50vh',
+    width: '37vw',
+    margin: 'auto'
+  },
+  title: {
+    margin: '10px',
+    fontFamily: 'nordi',
+    color: '#737373',
+    marginLeft: '16vw',
+    fontSize: '2.5rem'
+  },
+  content: {
+    fontSize: '1.5rem'
   },
 
-  '@media (min-width: 800px)': {
-    container: {
-      height: '110vh',
-      backgroundColor: '#EFEFED',
-      zIndex: '10'
+  '@media (max-width: 1024px)': {
+    root: {
+      backgroundColor: '#D4D7DC',
+      marginLeft: '10vw',
+      marginTop: '8vh',
+      width: '70vw',
     },
-
-    card:{
-      position: 'absolute',
-      marginTop: '15vh',
-      width: '60vw', 
-      height: '75vh',  
-      marginLeft: '20vw', 
+    media: {
+      height: '30vh',
+      width: '70vw',
+      margin: 'auto'
     },
-    downvote: {
-      position: 'absolute',
-      marginLeft: '45.5vw',
-      marginTop: '90vh',
-      height: '50px',
-      width: '50px',
-      zIndex: '10000',
-  },
-  arrow: {
-      width: "100px",
-      height: "100px",
-      transition: '1s',
+    title: {
       color: '#737373',
+      marginLeft: '25vw',
+      fontSize: '2.5rem'
+    },
+    content: {
+      fontSize: '1.5rem'
+    }
   },
+  '@media (max-width: 800px)': {
+    root: {
+      backgroundColor: '#D4D7DC',
+      marginLeft: '10vw',
+      marginTop: '8vh',
+      width: '70vw',
+    },
+    media: {
+      height: '20vh',
+      width: '70vw',
+      margin: 'auto'
+    },
+    title: {
+      color: '#737373',
+      marginLeft: '15vw',
+      fontSize: '2.5rem'
+    },
+    content: {
+      fontSize: '1.5rem'
+    }
   }
+    
+});
 
-}));
 
-export default function SectionTimeline() {
-    const classes = useStyles();
-    const [value, setValue] = useState(0);
-    const [previous, setPrevious] = useState(0);
-    return(<div>
-      <div className={classes.container}>
-        <Link className={classes.downvote}
-                    to="gallery"
-                    spy={true}
-                    smooth={true}
-                    offset={60}
-                    duration= {1000} >
-            <Arrowd id='achi' className={classes.arrow} />
-        </Link>
-        <div className={classes.card}>
-            <HorizontalTimeline
-              index={value}
-              indexClick={(index) => {
-                  setValue(index); 
-                  setPrevious(value);
-              }}
-              values={ VALUES } 
-              labelWidth={100}
-              />
-              <SectionMediaCard index={value}/>
-        </div>      
+
+const img = [img1, img2, img3, img4, img5, img6, img7];
+const text = ['Team Rudra achieved 5th world rank and 1st Asia rank.', 'Team Rudra bagged 5th position in world and 1st in Asia.',
+  'Team Rudra achieved 12th world rank and 2nd rank in Asia.', 'Team Rudra stood at 9th position in world and 1st among the Asian Teams.',
+  'Team Rudra stood at 20th position in world and 4th among the Asian Teams.', 'Team Rudra stood at 11th position in world and 2nd among the Asian Teams.',
+  'Team Rudra stood at 3rd position globally and 1st among the Asian teams'];
+const title = ['URC-2013', 'URC-2014', 'URC-2015', 'URC-2016', 'URC-2017', 'URC-2019', 'IRC-2020'];
+
+export default function SectionTimeline(props) {
+  const classes = useStyles();
+
+  return (
+    <div>
+      <div className={classes.root}>
+            <h1 className={classes.title}>
+              {title[props.index]}
+            </h1>
+            <CardMedia
+              className={classes.media}
+              component="img"
+              image={img[props.index]}
+            />
+            <CardContent>
+              <Typography className={classes.content} variant="body2" color="textSecondary" component="p">
+                {text[props.index]}
+              </Typography>
+            </CardContent>
       </div>
-      </div>);
+    </div>
+  );
 }

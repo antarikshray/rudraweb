@@ -53,6 +53,11 @@
 .tit1{
     font-family: "nordi";    
 }
+.brandFooter {
+    font-family: 'nordi';
+    font-size: '4em';
+    color: '#000';
+}
 
 .timelinesubs{
    color: "#ffffff";
