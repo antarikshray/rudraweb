@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/rudraweb/precache-manifest.edda5311c82a19a6c765eadbdaab95c0.js"
+  "/rudraweb/precache-manifest.645f56eacfeef11a68d159e3b36330db.js"
 );
 
 self.addEventListener('message', (event) => {
