@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import { shadows } from '@material-ui/system';
 
-import bgImage from 'assets/img/bg8.jpg';
+import bgImage from 'assets/img/bg8.webp';
 import Arrowd from "@material-ui/icons/ArrowDropDown";
 
 const useStyles = makeStyles({
@@ -22,9 +22,9 @@ const useStyles = makeStyles({
         justifyContent: 'space-around'
     },
     title: {
-        fontFamily: 'gotham',
         fontSize: '6vw',
-        textStrokeWidth: '5px',
+        fontWeight: '600',
+        textStrokeWidth: '4px',
         textStrokeColor: '#fff',
         textFillColor: 'transparent',
     },

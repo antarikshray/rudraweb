@@ -139,7 +139,7 @@ const useStyles = makeStyles({
             marginLeft: '12vw',
             border: '5px solid #FFAC62',
             borderRadius: '2px',
-            backgroundColor: '#FFAC62',
+            // backgroundColor: '#FFAC62',
             transition: '500ms ease-in-out',
             filter: 'drop-shadow(10px 0 10px #000)'
         }

@@ -41,7 +41,7 @@ const titgl = '30vw';
 const tital = '20vw';
 
 var ctr = 0;
-const IDs = ['pral', 'abts', 'achi', 'gal', 'achitit'];
+// const IDs = ['pral', 'abts', 'achi', 'gal', 'achitit'];
 
 
 // setInterval(function(){
@@ -103,10 +103,11 @@ const useStyles = makeStyles({
     },
     title: {
       fontFamily: "army",
-      fontSize: "6vw",
+      fontSize: "2em",
       fontWeight: "600",
       display: "inline-block",
-      position: "relative"
+      position: "relative",
+      top: "-4vh"
     },
     subtitle: {
       fontSize: "1.313rem",
@@ -114,7 +115,7 @@ const useStyles = makeStyles({
       marginLeft: "17vw",
     },
     mainRaised: {
-      margin: "-40px 20px 0px",
+      margin: "-38px 20px 0px",
       borderRadius: "6px",
       boxShadow:
         "0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)"
@@ -132,7 +133,7 @@ const useStyles = makeStyles({
       width: "50px",
       height: "50px",
       transition: '1s',
-      color: '#ffffff',
+      color: '#fff',
     },
   },
 
@@ -179,7 +180,7 @@ const useStyles = makeStyles({
       height: "100px",
       marginLeft: "135px",
       transition: '1s',
-      color: '#ffffff',
+      color: '#fff',
     },
   },
 

@@ -27,7 +27,7 @@ const useStyles = makeStyles({
       justifyContent: 'center',
       height: "125vh",
       zIndex: '10',
-      background: 'linear-gradient(90deg, #D9D9D9 50%, #8C8C8C 50%)'
+      background: 'linear-gradient(to bottom, #D9D9D9 , #8C8C8C)'
     },
     text: {
       lineHeight: '1.5em',
@@ -44,7 +44,7 @@ const useStyles = makeStyles({
     arrow: {
       fontSize: "100px",
       transition: '1s',
-      color: '#808080',
+      color: '#D9D9D9',
     },
   },
 
@@ -57,11 +57,11 @@ const useStyles = makeStyles({
       height: "80vh",
       zIndex: '10',
       transition: '1s ease-in-out',
-      background: 'linear-gradient(90deg, #D9D9D9 50%, #4a4a4a 50%)'
+      background: 'linear-gradient(to right, #D9D9D9, #4a4a4a)'
     },
     text: {
       lineHeight: '2em',
-      fontSize: '1.4em'
+      fontSize: '1.3em'
     },
     downvote: {
       height: '5vh',
@@ -74,7 +74,7 @@ const useStyles = makeStyles({
     arrow: {
       fontSize: "100px",
       transition: '1s',
-      color: '#808080',
+      color: '#D9D9D9',
     },
   }
 });
@@ -90,79 +90,79 @@ function getWindowDimensions() {
 export default function SectionPills() {
 
   const classes = useStyles();
-  const prevScrollY = useRef(0);
+  // const prevScrollY = useRef(0);
 
-  const [goingUp, setGoingUp] = useState(false);
-  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+  // const [goingUp, setGoingUp] = useState(false);
+  // const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
-  useEffect(() => {
-    ////////////////////////////resize event///////////////////////////
-    function handleResize() {
-      setWindowDimensions(getWindowDimensions());
-      // console.log(windowDimensions.width);
-    }
-    window.addEventListener('resize', handleResize);
+  // useEffect(() => {
+  //   ////////////////////////////resize event///////////////////////////
+  //   function handleResize() {
+  //     setWindowDimensions(getWindowDimensions());
+  //     // console.log(windowDimensions.width);
+  //   }
+  //   window.addEventListener('resize', handleResize);
 
-    ////////////////scroll event//////////////////////////
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      if (prevScrollY.current < currentScrollY && goingUp) {
-        setGoingUp(false);
-      }
-      if (prevScrollY.current > currentScrollY && !goingUp) {
-        setGoingUp(true);
-      }
+  //   ////////////////scroll event//////////////////////////
+  //   const handleScroll = () => {
+  //     const currentScrollY = window.scrollY;
+  //     if (prevScrollY.current < currentScrollY && goingUp) {
+  //       setGoingUp(false);
+  //     }
+  //     if (prevScrollY.current > currentScrollY && !goingUp) {
+  //       setGoingUp(true);
+  //     }
 
-      prevScrollY.current = currentScrollY;
-      Number.prototype.map = function (in_min, in_max, out_min, out_max) {
-        return (this - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
-      }
-      if (windowDimensions.width < 620) {
-        // if(goingUp===false&&currentScrollY>1389&&currentScrollY<2668){
-        //     let dif = 2668-1389;
-        //     dif = (currentScrollY-1389)/dif;
-        //     const disp = String(dif.map(0,1,-35,25));              
-        //     document.getElementById("overachi").style.transform="translateX("+ disp +"%)";
-        //     document.getElementById("underachi").style.transform="translateX("+ disp +"%)";
-        // }
-        // else if(goingUp===true&&currentScrollY>1389&&currentScrollY<2668){
-        //   let dif = 2668-1389;
-        //     dif = (currentScrollY-1389)/dif;
-        //     const disp = String(dif.map(0,1,-35,25));
-        //   document.getElementById("overachi").style.transform="translateX("+ (disp) +"%)";
-        //   document.getElementById("underachi").style.transform="translateX("+ (disp) +"%)";
-        //   }
-      }
+  //     prevScrollY.current = currentScrollY;
+  //     Number.prototype.map = function (in_min, in_max, out_min, out_max) {
+  //       return (this - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+  //     }
+  //     if (windowDimensions.width < 620) {
+  //       // if(goingUp===false&&currentScrollY>1389&&currentScrollY<2668){
+  //       //     let dif = 2668-1389;
+  //       //     dif = (currentScrollY-1389)/dif;
+  //       //     const disp = String(dif.map(0,1,-35,25));              
+  //       //     document.getElementById("overachi").style.transform="translateX("+ disp +"%)";
+  //       //     document.getElementById("underachi").style.transform="translateX("+ disp +"%)";
+  //       // }
+  //       // else if(goingUp===true&&currentScrollY>1389&&currentScrollY<2668){
+  //       //   let dif = 2668-1389;
+  //       //     dif = (currentScrollY-1389)/dif;
+  //       //     const disp = String(dif.map(0,1,-35,25));
+  //       //   document.getElementById("overachi").style.transform="translateX("+ (disp) +"%)";
+  //       //   document.getElementById("underachi").style.transform="translateX("+ (disp) +"%)";
+  //       //   }
+  //     }
 
-      else {
-        if (goingUp === false && currentScrollY > 0 && currentScrollY < 801) {
-          let dif = 801 - 0;
-          dif = (currentScrollY - 0) / dif;
-          const disp = String(dif.map(0, 1, 50, 105));
-          console.log(disp);
-          if (disp < 100) {
-            document.getElementById("pillsbg").style.background = 'linear-gradient(90deg, #D9D9D9' + (100 - disp) + '%, #4a4a4a ' + (disp) + '%)';
-          }
-          else {
-            document.getElementById("pillsbg").style.background = '#D9D9D9';
-          }
-        }
-        else if (goingUp === true && currentScrollY > 0 && currentScrollY < 801) {
-          let dif = 801 - 0;
-          dif = (currentScrollY - 0) / dif;
-          const disp = String(dif.map(0, 1, 50, 105));
-          document.getElementById("pillsbg").style.background = 'linear-gradient(90deg, #D9D9D9' + (100 - disp) + '%, #4a4a4a ' + (disp) + '%)';
-        } else if (goingUp === true && currentScrollY > 801) {
-          document.getElementById("pillsbg").style.background = 'linear-gradient(90deg, #D9D9D9 %, #4a4a4a %)';
-        }
-      }
-    };
+  //     else {
+  //       if (goingUp === false && currentScrollY > 0 && currentScrollY < 801) {
+  //         let dif = 801 - 0;
+  //         dif = (currentScrollY - 0) / dif;
+  //         const disp = String(dif.map(0, 1, 50, 105));
+  //         console.log(disp);
+  //         if (disp < 100) {
+  //           document.getElementById("pillsbg").style.background = 'linear-gradient(90deg, #D9D9D9' + (100 - disp) + '%, #4a4a4a ' + (disp) + '%)';
+  //         }
+  //         else {
+  //           document.getElementById("pillsbg").style.background = '#D9D9D9';
+  //         }
+  //       }
+  //       else if (goingUp === true && currentScrollY > 0 && currentScrollY < 801) {
+  //         let dif = 801 - 0;
+  //         dif = (currentScrollY - 0) / dif;
+  //         const disp = String(dif.map(0, 1, 50, 105));
+  //         document.getElementById("pillsbg").style.background = 'linear-gradient(90deg, #D9D9D9' + (100 - disp) + '%, #4a4a4a ' + (disp) + '%)';
+  //       } else if (goingUp === true && currentScrollY > 801) {
+  //         document.getElementById("pillsbg").style.background = 'linear-gradient(90deg, #D9D9D9 %, #4a4a4a %)';
+  //       }
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
+  //   window.addEventListener("scroll", handleScroll, { passive: true });
 
-    return () => window.removeEventListener("scroll", handleScroll);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [goingUp]);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener('resize', handleResize);
+  // }, [goingUp]);
 
 
 const stylet = () => {
@@ -176,11 +176,12 @@ const stylet = () => {
 
   return (
     <div id="pillsbg" className={classes.container}>
+      <br /><br />
       <GridContainer direction="row"
         justify="center"
         alignItems="center"
         id="navigation-pills">
-        <GridItem className={classes.content} xs={10} sm={15} md={13} lg={9}>
+        <GridItem className={classes.content} xs={10} sm={15} md={9} lg={9}>
           <NavPills
             color="primary"
             horizontal={{
@@ -243,7 +244,7 @@ const stylet = () => {
         to="news"
         spy={true}
         smooth={true}
-        offset={0}
+        offset={70}
         duration={1000} >
         <Arrowd id="abts" className={classes.arrow} color="primary" />
       </Link>

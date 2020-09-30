@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Parallax, Background } from 'react-parallax';
 import { isMobile } from 'react-device-detect';
 import { Link, animateScroll as scroll } from "react-scroll";
+import DelayLink from 'react-delay-link';
 
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -11,15 +12,15 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import Paper from '@material-ui/core/Paper';
 
 
-import saksham from 'assets/img/image/teams/team20/saksham.jpg';
+import saksham from 'assets/img/image/teams/team20/saksham.webp';
 import ayush from 'assets/img/image/teams/team20/Aayush.webp';
 import nitesh from 'assets/img/image/teams/team20/Nitesh Thota.webp';
 import Ali from 'assets/img/image/teams/team20/Rahamath Ali.webp';
 import Fenil from 'assets/img/image/teams/team20/Fenil.jpg';
-import hemangi from 'assets/img/image/teams/team20/Hemangi.jpeg';
-import Lekha from 'assets/img/image/teams/team20/Lekha K.png';
+import hemangi from 'assets/img/image/teams/team20/Hemangi.webp';
+import Lekha from 'assets/img/image/teams/team20/LekhaK.webp';
 import Aravind from 'assets/img/image/teams/team20/aravind.webp';
-import Tuhin from 'assets/img/image/teams/team20/Tuhin.jpg';
+import Tuhin from 'assets/img/image/teams/team20/Tuhin.webp';
 import bgImage from 'assets/img/sign.jpg';
 import bgImageMob from 'assets/img/Team.jpg';
 import Arrowd from "@material-ui/icons/ArrowDropDown";
@@ -37,7 +38,8 @@ const useStyles = makeStyles({
     justifyContent: 'space-around'
   },
   title: {
-    fontFamily: 'gotham',
+    // fontFamily: 'gotham',
+    fontWeight: '600',
     textStrokeColor: '#fff',
     textFillColor: 'transparent',
   },
@@ -101,11 +103,11 @@ const useStyles = makeStyles({
 
   '@media (min-width: 800px)': {
     container: {
-      height: '115vh',
+      height: '120vh',
     },
     title: {
       fontSize: '6vw',
-      textStrokeWidth: '5px',
+      textStrokeWidth: '3px',
       marginTop: '2vh'
     },
     content: {
@@ -115,8 +117,8 @@ const useStyles = makeStyles({
       justifyContent: 'space-around'
     },
     box: {
-      height: '37vh',
-      width: '16vw',
+      height: '42vh',
+      width: '17vw',
     },
     break: {
       flexBasis: '100%',
@@ -128,8 +130,8 @@ const useStyles = makeStyles({
       width: '10vw',
     },
     cover: {
-      height: '34vh',
-      width: '15vw',
+      height: '40vh',
+      width: '16vw',
       filter: 'blur(5px)',
       clipPath: 'polygon(0 0, 100% 0%, 100% 64%, 50% 40%, 0 64%)',
     },
@@ -272,8 +274,8 @@ const images = [{
 var bgImageRender = () => {
   if (isMobile)
     return bgImageMob;
-    
-    return bgImage;
+
+  return bgImage;
 }
 
 export default function FullWidthGrid() {
@@ -342,18 +344,34 @@ export default function FullWidthGrid() {
       return (
         <React.Fragment>
           {contentRender()}
+          <DelayLink delay={1800} to="/landing-page" clickAction={() => {
+          document.getElementById('load1').style.width = '50vw';
+          document.getElementById('load2').style.height = '120vh';
+          setTimeout(function () {
+            document.getElementById('load3').style.height = '120vh';
+          }, 500);
+        }}>
           <Button className={classes.Button} size='large'>
-            Team History
+            What Do We Do?
      </Button>
+     </DelayLink>
         </React.Fragment>
       );
     }
     return (
       <div className={classes.content}>
         {contentRender()}
-        <Button className={classes.Button} size='large'>
-          Team History
+        <DelayLink delay={1800} to='/landing-page' clickAction={() => {
+          document.getElementById('load1').style.width = '50vw';
+          document.getElementById('load2').style.height = '120vh';
+          setTimeout(function () {
+            document.getElementById('load3').style.height = '120vh';
+          }, 500);
+        }}>
+          <Button className={classes.Button} size='large'>
+            What Do We Do?
      </Button>
+        </DelayLink>
       </div>
     );
   }

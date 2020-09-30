@@ -21,7 +21,7 @@ import image6 from "assets/img/image/carousel/c6.webp";
 import image8 from "assets/img/image/carousel/c8.webp";
 import image9 from "assets/img/image/carousel/c9.webp";
 import image10 from "assets/img/image/carousel/main.webp";
-import bgImage from "assets/img/bggal.jpg";
+import bgImage from "assets/img/bggal.webp";
 
 import "assets/css/slider.css";
 

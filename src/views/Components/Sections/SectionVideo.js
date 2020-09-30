@@ -23,20 +23,21 @@ const useStyles = makeStyles({
         width: '50vw',
         boxShadow: '0 10px 15px #000',
     },
-    title: {
-        fontFamily: "army",
+    title1: {
         fontSize: "7em",
         fontWeight: "600",
-        color: "#7900db",
-        textShadow: '2px 2px 4px #240638'
+        color: "#737373",
+        textShadow: '4px 4px 5px #0D0D0D'
     },
-    irc: {
-        width: '35vw',
-        height: '20vh',
+    title2: {
+        fontSize: "7em",
+        fontWeight: "600",
+        color: "#737373",
+        textShadow: '4px 4px 5px #0D0D0D'
     },
-   
+
     '@media (max-width: 1030px)': {
-        vidCard:{
+        vidCard: {
             height: '60vh',
             marginBottom: '10vh'
         },
@@ -48,14 +49,18 @@ const useStyles = makeStyles({
             height: '23.5vh',
             width: '55vw',
         },
-        title:{
+        title1: {
             fontSize: '4em',
-            textShadow: '2px 2px 6px #240638'
+            textShadow: '4px 4px 5px #0D0D0D'
+        },
+        title2: {
+            fontSize: '4em',
+            textShadow: '4px 4px 5px #0D0D0D'
         }
     },
 
     '@media (max-width: 800px)': {
-        vidCard:{
+        vidCard: {
             flexDirection: 'column',
             height: '85vh',
         },
@@ -69,14 +74,13 @@ const useStyles = makeStyles({
             height: '23vh',
             width: '80vw',
         },
-        title:{
+        title1: {
             order: '1',
             fontSize: '3em'
         },
-        irc:{
+        title2: {
             order: '3',
-            width: '80vw',
-            height: '10vh',
+            fontSize: '3em'
         }
     }
 });
@@ -89,12 +93,13 @@ export default function SectionVideo() {
             <Box className={classes.player1}>
                 <ReactPlayer url='https://youtu.be/2gt8fW8TD7c' controls='true' volume='1' muted='true' height='100%' width='100%' loop='true' playing />
             </Box>
-            <div className={classes.title}>
+            <div className={classes.title1}>
                 SAR-2020
             </div>
-            <div className={classes.irc}>
-                <h1 className={classes.title}>IRC-2020-After Movie</h1>
+            <div className={classes.title2}>
+                IRC-2020
             </div>
+
             <Box className={classes.player2}>
                 <ReactPlayer url='https://youtu.be/B3iRm-0kSSY' controls='true' volume='1' muted='true' height='100%' width='100%' loop='true' playing />
             </Box>

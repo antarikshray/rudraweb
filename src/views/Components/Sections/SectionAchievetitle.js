@@ -149,7 +149,6 @@ export default function AchieveTitle(props) {
     ////////////////////////////resize event///////////////////////////
     function handleResize() {
       setWindowDimensions(getWindowDimensions());
-      // console.log(windowDimensions.width);
     }
     window.addEventListener('resize', handleResize);
 
@@ -168,17 +167,18 @@ export default function AchieveTitle(props) {
         return (this - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
       }
       if (windowDimensions.width > 1024) {
-        if (goingUp === false && currentScrollY > 2332 && currentScrollY < 3445) {
-          let dif = 3445 - 2332;
-          dif = (currentScrollY - 2332) / dif;
-          const disp = String(dif.map(0, 1, -25, 35));
+        console.log(currentScrollY);
+        if (goingUp === false && currentScrollY > 1760 && currentScrollY < 2607) {
+          let dif = 2607 - 1760;
+          dif = (currentScrollY - 1760) / dif;
+          const disp = String(dif.map(0, 1, -20, 20));
           document.getElementById("overachi").style.transform = "translateX(" + disp + "%)";
           document.getElementById("underachi").style.transform = "translateX(" + disp + "%)";
         }
-        else if (goingUp === true && currentScrollY > 2332 && currentScrollY < 3445) {
-          let dif = 3445 - 2332;
-          dif = (currentScrollY - 2332) / dif;
-          const disp = String(dif.map(0, 1, -25, 35));
+        else if (goingUp === true && currentScrollY > 1760 && currentScrollY < 2607) {
+          let dif = 2607 - 1760;
+          dif = (currentScrollY - 1760) / dif;
+          const disp = String(dif.map(0, 1, -20, 20));
           document.getElementById("overachi").style.transform = "translateX(" + (disp) + "%)";
           document.getElementById("underachi").style.transform = "translateX(" + (disp) + "%)";
         }

@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import 'aframe';
 import 'aframe-particle-system-component';
 import 'aframe-look-at-component';
-import bgImage from '../../assets/img/bg5.jpg';
+import bgImage from '../../assets/img/bg5.webp';
 import { Entity, Scene } from 'aframe-react';
 import {
     BrowserView,

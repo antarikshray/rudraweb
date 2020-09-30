@@ -4,85 +4,124 @@ import { Parallax, Background } from 'react-parallax';
 import Button from "components/CustomButtons/Button.js";
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from "@material-ui/core/styles";
-import 'assets/css/sponsor.css';
 import Arrowd from "@material-ui/icons/ArrowDropDown";
 import wheeleez from 'assets/img/image/sponsors/wheeleez.webp';
 import nvidia from 'assets/img/image/sponsors/Nvidia_logo.webp';
 import anet from 'assets/img/image/sponsors/anet.webp';
-import vectorInk from 'assets/img/image/sponsors/vectorink.webp';
+import unfynite from 'assets/img/image/sponsors/unfynite.webp';
 import incwave from 'assets/img/image/sponsors/inception_wave.webp';
 import monster from 'assets/img/image/sponsors/monster.webp';
-import parall from "assets/img/rover.png";
+import parall from "assets/img/sponsorbg.webp";
 import { isMobile } from 'react-device-detect';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const useStyles = makeStyles({
-    container: {
-        height: '130vh',
-        // backgroundImage: 'url(' + bgImage + ')',
-        backgroundColor: '#12121C'
-        // display: 'flex',
-        // flexDirection: 'column',
-        // alignItems: 'center',
-        // justifyContent: 'space-around'
-    },
-    sponsor: {
-        height: '30vh',
-        // width: '50%',
-        backgroundColor: '#202432',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    title: {
-        height: '5vh',
-        width: '100%',
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-around',
-    },
-    h1: {
-        fontFamily: 'gotham',
-        fontSize: '15vw',
-        textStrokeWidth: '2px',
-        textStrokeColor: '#8896BF',
-        textFillColor: 'transparent',
-    },
-    image: {
-        width: '98%',
-    },
-    button: {
-        width: '100%',
-        margin: '5vh 0 4vh 0',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    downvote: {
-        marginTop: '5vh',
-        height: '5vh',
-        width: '100%',
-        zIndex: '10000',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'black',
-        opacity: '0.4',
-        transition: '250ms ease-in-out',
-        '&:hover': {
-            opacity: '0.7'
+
+    '@media (min-width: 800px)': {
+        container: {
+            height: '345vh',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'space-around'
+        },
+        title: {
+            fontSize: '5em',
+            fontWeight: '600',
+            textStrokeWidth: '2px',
+            textStrokeColor: '#D9D9D9',
+            textFillColor: 'transparent',
+        },
+        sponsor: {
+            height: '40vh',
+            width: '100%',
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-around',
+            margin: '2vh 0'
+        },
+        icon: {
+            width: '30%'
+        },
+        contentl: {
+            fontSize: '1.5em',
+            lineHeight: '1.5em',
+            width: '60%',
+            textAlign: 'left',
+            color: '#8C8C8C'
+        },
+        contentr: {
+            fontSize: '1.5em',
+            lineHeight: '1.5em',
+            width: '60%',
+            textAlign: 'right',
+            color: '#8C8C8C'
         }
     },
-    arrow: {
-        width: "100px",
-        height: "100px",
-        transition: '1s',
-        color: '#fff',
-        opacity: '0.3'
-    },
+    '@media (max-width: 800px)': {
+        container: {
+            backgroundColor: '#12121C',
+            height: '130vh',
+        },
+        sponsor: {
+            height: '30vh',
+            // width: '50%',
+            backgroundColor: '#202432',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+        },
+        title: {
+            height: '5vh',
+            width: '100%',
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-around',
+        },
+        h1: {
+            fontFamily: 'gotham',
+            fontSize: '15vw',
+            textStrokeWidth: '2px',
+            textStrokeColor: '#8896BF',
+            textFillColor: 'transparent',
+        },
+        image: {
+            width: '98%',
+        },
+        button: {
+            width: '100%',
+            margin: '5vh 0 4vh 0',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+        },
+        downvote: {
+            marginTop: '5vh',
+            height: '5vh',
+            width: '100%',
+            zIndex: '10000',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: 'black',
+            opacity: '0.4',
+            transition: '250ms ease-in-out',
+            '&:hover': {
+                opacity: '0.7'
+            }
+        },
+        arrow: {
+            width: "100px",
+            height: "100px",
+            transition: '1s',
+            color: '#fff',
+            opacity: '0.3'
+        },
+    }
 });
 
 
@@ -90,60 +129,6 @@ export default function SectionSponsorship(props) {
     const classes = useStyles();
 
     const prevScrollY = useRef(0);
-    useEffect(() => {
-        if (!isMobile) {
-            ////////////////scroll event//////////////////////////
-            const handleScroll = () => {
-                const currentScrollY = window.scrollY;
-                prevScrollY.current = currentScrollY;
-                let element = document.getElementById('sponsortitle');
-                let element2 = document.getElementById('partnerstitle');
-                console.log(currentScrollY);
-                if (currentScrollY > 9100 && currentScrollY < 10040) {
-                    element.className = 'titleDuring';
-                    document.getElementById('sponsorcontainer').style.backgroundColor = '#6C44D2';
-                } else if (currentScrollY >= 10040) {
-                    element.className = 'titleAfter';
-                    document.getElementById('sponsorcontainer').style.backgroundColor = '#009BB3';
-                } else {
-                    element.className = 'title';
-                }
-
-                if (currentScrollY > 10896 && currentScrollY < 12216) {
-                    element2.className = 'titlePDuring';
-                } else if (currentScrollY >= 12216) {
-                    element2.className = 'titlePAfter';
-                } else {
-                    element2.className = 'title2';
-                }
-                if (currentScrollY >= 11830) {
-                    document.getElementById('button').style.width = '20vw';
-                }
-                else {
-                    document.getElementById('button').style.width = '0px';
-                }
-                if (currentScrollY >= 13884) {
-                    document.getElementById('patreonnote').style.width = '0%';
-                    document.getElementById('patreondot').style.backgroundColor = '#D98471';
-                }
-                else {
-                    document.getElementById('patreonnote').style.width = '100%';
-                    document.getElementById('patreonnote').style.backgroundColor = '#634C73';
-                    document.getElementById('patreondot').style.backgroundColor = '#634C73';
-                }
-                if (currentScrollY >= 14257) {
-                    document.getElementById('contactOutline').style.backgroundColor = 'transparent';
-                }
-                else {
-                    document.getElementById('contactOutline').style.backgroundColor = '#FFAC62';
-                }
-            };
-
-            window.addEventListener("scroll", handleScroll, { passive: true });
-
-            return () => window.removeEventListener("scroll", handleScroll);
-        }
-    }, [prevScrollY, isMobile]);
 
     var settings = {
         dots: false,
@@ -190,7 +175,7 @@ export default function SectionSponsorship(props) {
                 <br />
                 <Slider {...settings}>
                     <Paper elevation={24} className={classes.sponsor}>
-                        <img className={classes.image} src={vectorInk} style={{ width: '80%', margin: 'auto', marginTop: '2vh' }} width="100%" ></img>
+                        <img className={classes.image} src={unfynite} style={{ width: '80%', margin: 'auto', marginTop: '2vh' }} width="100%" ></img>
                     </Paper>
                     <Paper elevation={24} className={classes.sponsor}>
                         <img className={classes.image} src={incwave} width="100%"></img>
@@ -216,57 +201,67 @@ export default function SectionSponsorship(props) {
         );
     }
     return (
-        <div id='sponsorcontainer' className='container'>
-            <div id="sponsortitle" className='title'>
-                <h1 className='titleFont' style={{ fontSize: '10vh', fontWeight: '100px' }}>SPONSORS</h1>
-            </div>
-            <div className='wheeleez'>
-                <img height='100%' className='wheeleezimag' src={wheeleez} />
-                <hr className='horisponsor'></hr>
-            </div>
-            <div className='nvidia'>
-                <img height='100%' className='nvidiaimag' src={nvidia} />
-                <hr className='horisponsor'></hr>
-            </div>
-
-            <div className='anet'>
-                <img height='100%' className='anetimag' src={anet} />
-                <hr className='horisponsor'></hr>
-            </div>
-            <Parallax
-                blur={{ min: -100, max: 100 }}
-                bgImage={parall}
-                style={{ overflow: 'visible' }}
-                bgImageStyle={{ position: 'absolute', marginTop: '150vh', height: '70vh', width: '70vw' }}
-                bgImageAlt="the cat"
-                strength={700}
-            >
-                <div style={{ height: '200vh' }}>
+        <Parallax
+            bgImage={parall}
+            bgImageAlt="the cat"
+            strength={700}
+        >
+            <div className={classes.container}>
+                <h1 className={classes.title}>MEET OUR SPONSORS</h1>
+                <div className={classes.sponsor}>
+                    <img src={wheeleez} className={classes.icon} height="100%" width="100%" />
+                    <p className={classes.contentr}>
+                        Wheeleez is the sponsor for our rover wheels. They, <br />provide us woth top
+                        quality balloon wheels for better<br /> traversal on sandy and difficult terrain.
+                    </p>
                 </div>
-            </Parallax>
-            <div id="partnerstitle" className='title2'>
-                <h1 className='titleFont'>PARTNERS</h1>
+                <div className={classes.sponsor}>
+                    <img src={nvidia} className={classes.icon} height="100%" width="100%" />
+                    <p className={classes.contentr}>
+                        Nvidia Corporation is a multinational technology<br /> which designs
+                    GPUs, as well as CPUs for mobile<br /> computing. Nvidia sponsored
+                    the Jetson TX2 dev <br />board
+                    which is used as a powerful brain on the rover.
+                    </p>
+                </div>
+                <div className={classes.sponsor}>
+                    <img src={anet} className={classes.icon} height="100%" width="100%" />
+                    <p className={classes.contentr}>
+                        Anet 3D printers provide you with comfortable home <br />
+                    based 3D printing technology using multiple materials.<br />
+                    Anet sponsored us with one to print Tough joints and <br />
+                    Ligaments of the Rover.
+                    </p>
+                </div>
+                <h1 className={classes.title}>OUR PARTNERS</h1>
+                <div className={classes.sponsor}>
+                    <p className={classes.contentl}>
+                        Unfynite is a Design Company for Businesses
+                    <br />that provide us with Notification Posters to
+                    <br />Shoutouts!
+                    </p>
+                    <img src={unfynite} className={classes.icon} height="100%" width="100%" />
+                </div>
+                <div className={classes.sponsor}>
+                    <p className={classes.contentl}>
+                        Inception Wave is a Student Chapter that focusses <br />
+                    on bridging the gap between businesses. They are <br />
+                    responsible for shoutouts and Media Reach for our endeavours.
+                    </p>
+                    <img src={incwave} className={classes.icon} height="100%" width="100%" />
+                </div>
+                <div className={classes.sponsor}>
+                    <p className={classes.contentl}>
+                        Monster Energy is an International Energy Drink producer. <br />
+                    They provide us thirst wrenching energy drinks with great taste<br />
+                    and help us outperform competitors.
+                    </p>
+                    <img src={monster} className={classes.icon} height="100%" width="100%" />
+                </div>
+                <br />
+                <br />
+                <br />
             </div>
-            <div className='vectorInk'>
-                <img height='100%' className='vectorimag' src={vectorInk} />
-                <h2 className='vectortitle'>DESIGN PARTNER</h2>
-                <hr className='horipartner'></hr>
-            </div>
-            <div className='inceptionwave'>
-                <img height='100%' className='vectorimag' src={incwave} />
-                <h2 className='vectortitle'>MEDIA PARTNER</h2>
-                <hr className='horipartner'></hr>
-            </div>
-            <div className='monster'>
-                <img height='100%' className='monsterimag' src={monster} />
-                <h2 className='vectortitle'>ENERGY PARTNER</h2>
-                <hr className='horipartner'></hr>
-            </div>
-            <div id='button' className='button'>
-                <Button style={{ backgroundColor: '#005A82' }} size="lg" round>
-                    Find out all sponsors
-                </Button>
-            </div>
-        </div>
+        </Parallax>
     );
 }

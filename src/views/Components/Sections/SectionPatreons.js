@@ -6,8 +6,8 @@ import Arrowd from "@material-ui/icons/ArrowDropDown";
 import { isMobile } from 'react-device-detect';
 import { Link, animateScroll as scroll } from "react-scroll";
 
-import director from 'assets/img/image/directoret.png';
-import advisor from 'assets/img/image/rathinamf.png';
+import director from 'assets/img/image/directoret.webp';
+import advisor from 'assets/img/image/rathinamf.webp';
 
 const useStyles = makeStyles({
 
@@ -131,7 +131,7 @@ export default function SectionPatreon(props) {
         return (
             <div className={classes.container}>
                 <div className={classes.title}>
-                    <h1 className={classes.h1}>MEET OUR PATRONS</h1>
+                    <h1 className={classes.h1}>MEET OUR FACULTY</h1>
                 </div>
                 <Parallax
                     style={{ position: 'absolute', overflow: 'visible' }}
@@ -156,17 +156,17 @@ export default function SectionPatreon(props) {
                     </div>
                 </Parallax>
                 {/* animations done in SectionSponsorship */}
-                <span id="patreondot" style={{ position: 'fixed', top: '80vh', right: '7vw', height: '100px', width: '100px', backgroundColor: '#634C73', borderRadius: '50%', display: 'inline-block' }} class="dot"></span>
+                {/* <span id="patreondot" style={{ position: 'fixed', top: '80vh', right: '7vw', height: '100px', width: '100px', backgroundColor: '#634C73', borderRadius: '50%', display: 'inline-block' }} class="dot"></span> */}
                 <div className={classes.note}>
-                    <div id="patreonnote" className={classes.nover}>
-                    </div>
+                    {/* <div id="patreonnote" className={classes.nover}>
+                    </div> */}
                     <h1 style={{ color: '#634C73', zIndex: '500', marginLeft: '3vw' }}>Thank you</h1>
-                    <h3 style={{ color: '#634C73', zIndex: '500', width: '37vw', marginLeft: '3vw' }}>
+                    <h4 style={{ color: '#634C73', zIndex: '500', width: '37vw', marginLeft: '3vw' }}>
                         The entire team is highly grateful and thankful to the Director,
                         Engineering & Technology, Dr. C.Muthamizhchelvan, SRM Management and also
                         for the guidance of the faculty Mentor/advisor Dr .A. Rathinam. As these
                         developments and achievements of the team became reality only by the unstinted
-                            support of these patrons.</h3>
+                            support of these patrons.</h4>
                 </div>
             </div>
         );

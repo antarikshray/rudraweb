@@ -5,12 +5,11 @@ import { Link, animateScroll as scroll } from "react-scroll";
 
 import Arrowd from "@material-ui/icons/ArrowDropDown";
 
-import Bgvideo from "assets/videos/warrovervidf.mp4";
-import rudrawin from "assets/img/image/news/rudrawin2.webp";
-import webinar from "assets/img/image/news/webinar.jpg";
-import transistors from "assets/img/image/news/Transistors.png";
-import altium from "assets/img/image/news/altium.jpg";
-import ML from "assets/img/image/news/ML.jpg";
+import Bgvideo from "assets/videos/warrovervidf.webm";
+import rudrawin from "assets/img/image/news/rudrawin.webp";
+import webinar from "assets/img/image/news/webinar.webp";
+import transistors from "assets/img/image/news/Transistors.webp";
+import recruitment from "assets/img/image/news/recruitment.webp";
 
 const useStyles = makeStyles({
     container: {
@@ -44,7 +43,7 @@ const useStyles = makeStyles({
         order: '2',
         fontFamily: 'cairoBlack',
         color: '#fff',
-        fontSize: '10vw',
+        fontSize: '8vw',
         fontWeight: '400',
         textStrokeWidth: '5px',
         textStrokeColor: '#fff',
@@ -235,7 +234,7 @@ export default function SectionNews() {
                 </video>
             </div>
             <h1 className={classes.title}>
-                NEWS
+                UPDATES
             </h1>
             <div className={classes.first}></div>
             <div className={classes.news1}>
@@ -252,24 +251,24 @@ export default function SectionNews() {
                 {/* <h2 className={classes.wrapper}>Update on URC 2020 due to COVID-19</h2> */}
             </div>
             <div className={classes.news3}>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOIH8bOgD2yHTuxl-pjZwa4DY2JfaT8UvJ15UO5n2URdJpWw/closedform">
+                <a href="https://www.youtube.com/channel/UC2Lu4ABOxd43mizJGFATF_w">
                     <img src={webinar} width='100%' height='100%' />
                 </a>
                 {/* <h2 className={classes.wrapper}>Sponsored for 3D printers by ANET</h2> */}
             </div>
             <div className={classes.third}></div>
             <div className={classes.news4}>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOIH8bOgD2yHTuxl-pjZwa4DY2JfaT8UvJ15UO5n2URdJpWw/closedform">
-                    <img src={altium} width='100%' height='100%' />
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScUn2O1x_imU32m4wcvu_pajH2tUFQT8kiZn9AlgVmLZJY9Ww/viewform?usp=sf_link">
+                    <img src={recruitment} width='100%' height='100%' />
                 </a>
                 {/* <h2 className={classes.wrapper}>Sponsored for electronic components by Sparkfun</h2> */}
             </div>
-            <div className={classes.news5}>
+            {/* <div className={classes.news5}>
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOIH8bOgD2yHTuxl-pjZwa4DY2JfaT8UvJ15UO5n2URdJpWw/closedform">
-                    <img src={ML} width='100%' height='100%' />
+                    <img src={webinar} width='100%' height='100%' />
                 </a>
-                {/* <h2 className={classes.wrapper}>New Blog Post on Medium</h2> */}
-            </div>
+                 <h2 className={classes.wrapper}>New Blog Post on Medium</h2>
+            </div> */}
             <Link className={classes.downvote}
                 to="achievetitle"
                 spy={true}
