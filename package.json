@@ -1,5 +1,5 @@
 {
-  "homepage": "http://antarikshray.github.io/rudraweb",
+  "homepage": "http://srmrudra.com",
   "name": "teamrudra",
   "version": "1.8.0",
   "description": "team rudra website",
@@ -69,7 +69,7 @@
     "typescript": "3.5.3"
   },
   "scripts": {
-    "start": "export HTTPS=true&&PORT=3000 react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
