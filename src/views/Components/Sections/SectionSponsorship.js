@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { Parallax, Background } from "react-parallax";
-import Button from "components/CustomButtons/Button.js";
+// import Button from "views/TeamPage/node_modules/components/CustomButtons/Button.js";
 import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
+
 import Arrowd from "@material-ui/icons/ArrowDropDown";
 import wheeleez from "assets/img/image/sponsors/wheeleez.webp";
 import nvidia from "assets/img/image/sponsors/Nvidia_logo.webp";
@@ -21,15 +22,19 @@ import basicmicro from "assets/img/image/sponsors/basicmicro.webp";
 import irobocom from "assets/img/image/sponsors/irobocom.webp";
 import semikart from "assets/img/image/sponsors/semikart.webp";
 import srmpedia from "assets/img/image/sponsors/srmpedia.webp";
+
 import { isMobile } from "react-device-detect";
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import bgImage from "assets/img/sponsorbg.jpg"
+
 const useStyles = makeStyles({
   "@media (min-width: 800px)": {
     container: {
-      backgroundImage: "linear-gradient(to bottom, #F2F2F2, #8C8C8C);",
+      // backgroundImage: "linear-gradient(to bottom, #F2F2F2, #8C8C8C);",
       height: "180vh",
       display: "flex",
       flexDirection: "column",
@@ -42,12 +47,13 @@ const useStyles = makeStyles({
       textStrokeWidth: "3px",
       textStrokeColor: "#404040",
       textFillColor: "transparent",
-      filter: 'drop-shadow(4px 0 4px #000)'
+      filter: "drop-shadow(4px 0 4px #000)",
     },
     sponsorship: {
       height: "50vh",
       width: "90vw",
-      backgroundImage: "linear-gradient(to bottom, #F2F2F2, #999999)"
+      // backgroundImage: "linear-gradient(to bottom, #F2F2F2, #999999)",
+      // filter: 'blur(4px)',
     },
     sponsor: {
       height: "50vh",
@@ -72,7 +78,8 @@ const useStyles = makeStyles({
       maxWidth: "25vw",
       margin: "auto",
       transform: "translateY(50px)",
-      filter: 'drop-shadow(7px 0 7px #000)'
+      filter: "drop-shadow(7px 0 7px #000)",
+      filter: 'blur(0px)'
     },
   },
   "@media (max-width: 800px)": {
@@ -160,24 +167,19 @@ export default function SectionSponsorship(props) {
 
   const sponsorship = [
     [
-    nvidia,
-    anet,
-    sparkfun,
-    wheeleez,
-    solidworks,
-    ansys,
-    protocase,
-    altium,
-    divvela,
-    basicmicro,
-    omgvh],
-    [
-      unfynite,
-      irobocom,
-      semikart,
-      monster,
-      srmpedia
-    ]
+      nvidia,
+      anet,
+      sparkfun,
+      wheeleez,
+      solidworks,
+      ansys,
+      protocase,
+      altium,
+      divvela,
+      basicmicro,
+      omgvh,
+    ],
+    [unfynite, irobocom, semikart, monster, srmpedia],
   ];
 
   const [curridx, setcurridx] = useState([0, 0]);
@@ -277,9 +279,6 @@ export default function SectionSponsorship(props) {
             ></img>
           </Paper>
         </Slider>
-        <div className={classes.button}>
-          <Button size="large">Know About Our Sponsors</Button>
-        </div>
         <Link
           className={classes.downvote}
           to="patron"
@@ -294,45 +293,52 @@ export default function SectionSponsorship(props) {
     );
   }
   return (
-    <div className={classes.container}>
-      <div>
-        <h1 className={classes.title}>SPONSORS</h1>
+    <Parallax
+      blur={{ min: -70, max: 60 }}
+      bgImage={bgImage}
+      bgImageAlt="the cat"
+      strength={1300}
+    >
+      <div className={classes.container}>
+        <div>
+          <h1 className={classes.title}>SPONSORS</h1>
+        </div>
+        <br />
+        <div className={classes.sponsorship}>
+          <Slider {...settingsmsp}>
+            {sponsorship[0].map((image, idx) => (
+              <div
+                className={
+                  idx == curridx[0] ? classes.sponsortrans : classes.sponsor
+                }
+              >
+                <img className={classes.image} src={image} />
+              </div>
+            ))}
+          </Slider>
+        </div>
+        <div>
+          <h1 className={classes.title}>PARTNERS</h1>
+        </div>
+        <br />
+        <div className={classes.sponsorship}>
+          <Slider {...settingsmpa}>
+            {sponsorship[1].map((image, idx) => (
+              <div
+                className={
+                  idx == curridx[1] ? classes.sponsortrans : classes.sponsor
+                }
+              >
+                <img className={classes.image} src={image} />
+              </div>
+            ))}
+          </Slider>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
       </div>
-      <br />
-      <div className={classes.sponsorship}>
-        <Slider {...settingsmsp}>
-          {sponsorship[0].map((image, idx) => (
-            <div
-              className={
-                idx == curridx[0] ? classes.sponsortrans : classes.sponsor
-              }
-            >
-              <img className={classes.image} src={image} />
-            </div>
-          ))}
-        </Slider>
-      </div>
-      <div>
-        <h1 className={classes.title}>PARTNERS</h1>
-      </div>
-      <br />
-      <div className={classes.sponsorship}>
-        <Slider {...settingsmpa}>
-          {sponsorship[1].map((image, idx) => (
-            <div
-              className={
-                idx == curridx[1] ? classes.sponsortrans : classes.sponsor
-              }
-            >
-              <img className={classes.image} src={image} />
-            </div>
-          ))}
-        </Slider>
-      </div>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-    </div>
+    </Parallax>
   );
 }

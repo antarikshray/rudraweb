@@ -172,10 +172,10 @@ export default function SectionSocial(props) {
 
     return (
         <Parallax
-            blur={{ min: -100, max: 100 }}
+            blur={{ min: -70, max: 60 }}
             bgImage={bgImage}
             bgImageAlt="the cat"
-            strength={1300}
+            strength={1100}
         >
             <div className={classes.container}>
                 <div className={classes.title}>Social</div>

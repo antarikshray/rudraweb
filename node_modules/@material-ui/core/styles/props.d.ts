@@ -18,6 +18,7 @@ import { CheckboxProps } from '../Checkbox';
 import { ChipProps } from '../Chip';
 import { CircularProgressProps } from '../CircularProgress';
 import { CollapseProps } from '../Collapse';
+import { ContainerProps } from '../Container';
 import { CssBaselineProps } from '../CssBaseline';
 import { DialogActionsProps } from '../DialogActions';
 import { DialogContentProps } from '../DialogContent';
@@ -26,6 +27,10 @@ import { DialogProps } from '../Dialog';
 import { DialogTitleProps } from '../DialogTitle';
 import { DividerProps } from '../Divider';
 import { DrawerProps } from '../Drawer';
+import { AccordionActionsProps } from '../AccordionActions';
+import { AccordionDetailsProps } from '../AccordionDetails';
+import { AccordionProps } from '../Accordion';
+import { AccordionSummaryProps } from '../AccordionSummary';
 import { ExpansionPanelActionsProps } from '../ExpansionPanelActions';
 import { ExpansionPanelDetailsProps } from '../ExpansionPanelDetails';
 import { ExpansionPanelProps } from '../ExpansionPanel';
@@ -80,9 +85,11 @@ import { StepLabelProps } from '../StepLabel';
 import { StepperProps } from '../Stepper';
 import { StepProps } from '../Step';
 import { SvgIconProps } from '../SvgIcon';
+import { SwipeableDrawerProps } from '../SwipeableDrawer';
 import { SwitchProps } from '../Switch';
 import { TableBodyProps } from '../TableBody';
 import { TableCellProps } from '../TableCell';
+import { TableContainerProps } from '../TableContainer';
 import { TableHeadProps } from '../TableHead';
 import { TablePaginationProps } from '../TablePagination';
 import { TableProps } from '../Table';
@@ -98,7 +105,7 @@ import { TypographyProps } from '../Typography';
 import { WithWidthOptions } from '../withWidth';
 
 export type ComponentsProps = {
-  [Name in keyof ComponentsPropsList]?: Partial<ComponentsPropsList[Name]>
+  [Name in keyof ComponentsPropsList]?: Partial<ComponentsPropsList[Name]>;
 };
 
 export interface ComponentsPropsList {
@@ -122,6 +129,7 @@ export interface ComponentsPropsList {
   MuiChip: ChipProps;
   MuiCircularProgress: CircularProgressProps;
   MuiCollapse: CollapseProps;
+  MuiContainer: ContainerProps;
   MuiCssBaseline: CssBaselineProps;
   MuiDialog: DialogProps;
   MuiDialogActions: DialogActionsProps;
@@ -130,6 +138,10 @@ export interface ComponentsPropsList {
   MuiDialogTitle: DialogTitleProps;
   MuiDivider: DividerProps;
   MuiDrawer: DrawerProps;
+  MuiAccordion: AccordionProps;
+  MuiAccordionActions: AccordionActionsProps;
+  MuiAccordionDetails: AccordionDetailsProps;
+  MuiAccordionSummary: AccordionSummaryProps;
   MuiExpansionPanel: ExpansionPanelProps;
   MuiExpansionPanelActions: ExpansionPanelActionsProps;
   MuiExpansionPanelDetails: ExpansionPanelDetailsProps;
@@ -183,11 +195,13 @@ export interface ComponentsPropsList {
   MuiStepLabel: StepLabelProps;
   MuiStepper: StepperProps;
   MuiSvgIcon: SvgIconProps;
+  MuiSwipeableDrawer: SwipeableDrawerProps;
   MuiSwitch: SwitchProps;
   MuiTab: TabProps;
   MuiTable: TableProps;
   MuiTableBody: TableBodyProps;
   MuiTableCell: TableCellProps;
+  MuiTableContainer: TableContainerProps;
   MuiTableHead: TableHeadProps;
   MuiTablePagination: TablePaginationProps;
   MuiTableRow: TableRowProps;

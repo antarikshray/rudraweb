@@ -378,7 +378,7 @@ export default function FullWidthGrid() {
 
   return (
     <Parallax
-      blur={{ min: -100, max: 100 }}
+      blur={{ min: -70, max: 50 }}
       bgImage={bgImageRender()}
       bgImageAlt="the cat"
       strength={1000}

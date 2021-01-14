@@ -139,13 +139,13 @@ export default function SectionPatreon(props) {
             backgroundColor: "#466673",
             position: "absolute",
             left: "20vw",
-            marginTop: "80vh",
+            marginTop: "65vh",
             height: "60vh",
             width: "30vw",
             border: "7px solid white",
           }}
           bgImage={director}
-          strength={300}
+          strength={140}
         >
           <div style={{ height: "155vh", width: "40vw" }}>
             <h1
@@ -177,20 +177,20 @@ export default function SectionPatreon(props) {
           bgImageStyle={{
             backgroundColor: "#466673",
             position: "absolute",
-            left: "20vw",
-            marginTop: "100vh",
+            left: "30vw",
+            marginTop: "80vh",
             height: "60vh",
             width: "30vw",
             border: "7px solid white",
           }}
           bgImage={advisor}
-          strength={300}
+          strength={140}
         >
           <div style={{ height: "170vh", width: "40vw" }}>
             <h1
               style={{
                 position: "absolute",
-                left: "5vw",
+                left: "15vw",
                 bottom: "8vh",
                 color: "#466673",
                 fontWeight: "bold",
@@ -201,7 +201,7 @@ export default function SectionPatreon(props) {
             <h4
               style={{
                 position: "absolute",
-                left: "5vw",
+                left: "15vw",
                 bottom: "5vh",
                 color: "#466673",
                 fontWeight: "bold",
