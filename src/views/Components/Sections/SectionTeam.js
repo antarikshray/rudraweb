@@ -13,14 +13,14 @@ import Paper from '@material-ui/core/Paper';
 
 
 import saksham from 'assets/img/image/teams/team20/saksham.webp';
-import ayush from 'assets/img/image/teams/team20/Aayush.webp';
-import nitesh from 'assets/img/image/teams/team20/Nitesh Thota.webp';
-import Ali from 'assets/img/image/teams/team20/Rahamath Ali.webp';
-import Fenil from 'assets/img/image/teams/team20/Fenil.jpg';
-import hemangi from 'assets/img/image/teams/team20/Hemangi.webp';
-import Lekha from 'assets/img/image/teams/team20/LekhaK.webp';
+import ayush from 'assets/img/image/teams/team20/ayush.webp';
+import nitesh from 'assets/img/image/teams/team20/nitesh.webp';
+import Ali from 'assets/img/image/teams/team20/ali.webp';
+import Fenil from 'assets/img/image/teams/team20/fenil.jpg';
+import hemangi from 'assets/img/image/teams/team20/hemangi.webp';
+import Lekha from 'assets/img/image/teams/team20/lekha.webp';
 import Aravind from 'assets/img/image/teams/team20/aravind.webp';
-import Tuhin from 'assets/img/image/teams/team20/Tuhin.webp';
+import Tuhin from 'assets/img/image/teams/team20/tuhin.webp';
 import bgImage from 'assets/img/sign.jpg';
 import bgImageMob from 'assets/img/Team.jpg';
 import Arrowd from "@material-ui/icons/ArrowDropDown";
@@ -361,7 +361,7 @@ export default function FullWidthGrid() {
     return (
       <div className={classes.content}>
         {contentRender()}
-        <DelayLink delay={1800} to='/landing-page' clickAction={() => {
+        <DelayLink delay={1800} to='/team-page' clickAction={() => {
           document.getElementById('load1').style.width = '50vw';
           document.getElementById('load2').style.height = '120vh';
           setTimeout(function () {
@@ -369,7 +369,7 @@ export default function FullWidthGrid() {
           }, 500);
         }}>
           <Button className={classes.Button} size='large'>
-            What Do We Do?
+            TEAM HISTORY
      </Button>
         </DelayLink>
       </div>

@@ -182,15 +182,11 @@ export default function SectionSocial(props) {
                 <div className={classes.content}>
                     <Box className={classes.instagram}>
                         <InstagramEmbed
-                            url='https://www.instagram.com/p/BtTMxnYhSlZ/'
+                            url='https://www.instagram.com/p/CDGXYApDLhB/'
                             hideCaption={false}
                             containerTagName='div'
                             protocol=''
                             injectScript
-                            onLoading={() => { }}
-                            onSuccess={() => { }}
-                            onAfterRender={() => { }}
-                            onFailure={() => { }}
                         />
                     </Box>
                     <Box className={classes.facebook}>

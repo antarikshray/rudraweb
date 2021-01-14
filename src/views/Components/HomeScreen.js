@@ -41,23 +41,6 @@ const titgl = '30vw';
 const tital = '20vw';
 
 var ctr = 0;
-// const IDs = ['pral', 'abts', 'achi', 'gal', 'achitit'];
-
-
-// setInterval(function(){
-//   ctr++;
-//   if(ctr==1){
-//     for(let i=0;i<IDs.length;i++){
-//       document.getElementById(IDs[i]).style.height="50px";
-//     }
-//   }
-//     else if(ctr==2){
-//       for(let i=0;i<IDs.length;i++){
-//         document.getElementById(IDs[i]).style.height="100px";
-//       }    
-//     ctr=0;
-//   }
-// },1000);
 
 const useStyles = makeStyles({
 
@@ -76,7 +59,7 @@ const useStyles = makeStyles({
     width: '50vw',
     backgroundColor: '#bababa',
     zIndex: '1000000',
-    transition: '2s ease-in-out',
+    transition: '1.5s ease',
   },
   load2: {
     position: 'fixed',
@@ -84,7 +67,7 @@ const useStyles = makeStyles({
     width: '50vw',
     backgroundColor: '#bababa',
     zIndex: '1000000',
-    transition: '2s ease-in-out',
+    transition: '1.5s ease',
   },
   load3: {
     position: 'fixed',
@@ -93,7 +76,7 @@ const useStyles = makeStyles({
     width: '50vw',
     backgroundColor: '#454545',
     zIndex: '1000000',
-    transition: '2s ease-in-out',
+    transition: '1.5s ease',
   },
   
   '@media (max-width: 800px)': {
@@ -205,12 +188,12 @@ export default function Homepage(props) {
 
   useEffect(() => {
     setTimeout(function () {
-      document.getElementById('load1').style.width = '0px';
-      document.getElementById('load2').style.height = '0px';
-    }, 2000);
+      document.getElementById('load1').style.transform = 'translate(-50vw, 0)';
+      document.getElementById('load2').style.transform = 'translate(0, -120vh)';
+    }, 1500);
     setTimeout(function () {
-      document.getElementById('load3').style.height = '0px';
-    }, 3000);
+      document.getElementById('load3').style.transform = 'translate(0, -120vh)';
+    }, 2500);
     setTimeout(function () {
       document.getElementById('mainbrand').style.marginTop = '5vh';
     }, 4000);

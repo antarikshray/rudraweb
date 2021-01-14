@@ -167,17 +167,16 @@ export default function AchieveTitle(props) {
         return (this - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
       }
       if (windowDimensions.width > 1024) {
-        console.log(currentScrollY);
-        if (goingUp === false && currentScrollY > 1760 && currentScrollY < 2607) {
-          let dif = 2607 - 1760;
-          dif = (currentScrollY - 1760) / dif;
+        if (goingUp === false && currentScrollY > 2308 && currentScrollY < 3604) {
+          let dif = 3604 - 2308;
+          dif = (currentScrollY - 2308) / dif;
           const disp = String(dif.map(0, 1, -20, 20));
           document.getElementById("overachi").style.transform = "translateX(" + disp + "%)";
           document.getElementById("underachi").style.transform = "translateX(" + disp + "%)";
         }
-        else if (goingUp === true && currentScrollY > 1760 && currentScrollY < 2607) {
-          let dif = 2607 - 1760;
-          dif = (currentScrollY - 1760) / dif;
+        else if (goingUp === true && currentScrollY > 2308 && currentScrollY < 3604) {
+          let dif = 3604 - 2308;
+          dif = (currentScrollY - 2308) / dif;
           const disp = String(dif.map(0, 1, -20, 20));
           document.getElementById("overachi").style.transform = "translateX(" + (disp) + "%)";
           document.getElementById("underachi").style.transform = "translateX(" + (disp) + "%)";
