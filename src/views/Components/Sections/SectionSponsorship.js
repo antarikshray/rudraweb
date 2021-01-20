@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { Parallax, Background } from "react-parallax";
 // import Button from "views/TeamPage/node_modules/components/CustomButtons/Button.js";
-import Paper from "@material-ui/core/Paper";
+import Card from "@material-ui/core/Card";
 import { makeStyles } from "@material-ui/core/styles";
 
 import Arrowd from "@material-ui/icons/ArrowDropDown";
@@ -29,7 +29,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import bgImage from "assets/img/sponsorbg.jpg"
+import "assets/scss/sponsor.scss";
+
+import bgImage from "assets/img/sponsorbg.jpg";
 
 const useStyles = makeStyles({
   "@media (min-width: 800px)": {
@@ -79,21 +81,17 @@ const useStyles = makeStyles({
       margin: "auto",
       transform: "translateY(50px)",
       filter: "drop-shadow(7px 0 7px #000)",
-      filter: 'blur(0px)'
+      filter: "blur(0px)",
     },
   },
   "@media (max-width: 800px)": {
     container: {
       backgroundColor: "#12121C",
-      height: "130vh",
-    },
-    sponsor: {
-      height: "30vh",
-      // width: '50%',
-      backgroundColor: "#202432",
+      height: "120vh",
       display: "flex",
+      flexDirection: "column",
       alignItems: "center",
-      justifyContent: "center",
+      justifyContent: "space-around",
     },
     title: {
       height: "5vh",
@@ -111,7 +109,28 @@ const useStyles = makeStyles({
       textFillColor: "transparent",
     },
     image: {
-      width: "98%",
+      margin: "1vh 2px 8vh 0",
+    },
+    imageSpark: {
+      margin: "4vh 2px 0 0",
+    },
+    imageNvidia: {
+      margin: "3vh 2px 0 0",
+    },
+    imageWheeleez: {
+      margin: "6vh 2px 0 0",
+    },
+    imageAltium: {
+      margin: "7.5vh 2px 0 0",
+    },
+    irobocom: {
+      margin: "4.5vh 2px 0 0",
+    },
+    monster: {
+      margin: "7.5vh 2px 0 0",
+    },
+    semikart: {
+      margin: "9vh 2px 0 0",
     },
     button: {
       width: "100%",
@@ -187,7 +206,7 @@ export default function SectionSponsorship(props) {
   var settings = {
     dots: false,
     infinite: true,
-    adaptiveHeight: true,
+    // adaptiveHeight: true,
     speed: 500,
     autoplay: true,
     autoplaySpeed: 3000,
@@ -195,6 +214,7 @@ export default function SectionSponsorship(props) {
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
+    className: "sponsor",
   };
 
   var settingsm = {
@@ -233,25 +253,33 @@ export default function SectionSponsorship(props) {
         <br />
         <br />
         <Slider {...settings}>
-          <Paper elevation={24} className={classes.sponsor}>
-            <img
-              className={classes.image}
-              style={{ marginTop: "8vh" }}
-              src={wheeleez}
-              width="100%"
-            ></img>
-          </Paper>
-          <Paper elevation={24} className={classes.sponsor}>
-            <img
-              className={classes.image}
-              style={{ margin: "2vh 0 0 1vw" }}
-              src={nvidia}
-              width="100%"
-            ></img>
-          </Paper>
-          <Paper elevation={24} className={classes.sponsor}>
-            <img className={classes.image} src={anet} width="100%"></img>
-          </Paper>
+          <img className={classes.imageNvidia} src={nvidia} width="100%"></img>
+          <img className={classes.image} src={anet} width="100%"></img>
+          <img className={classes.imageSpark} src={sparkfun} width="100%"></img>
+          <img
+            className={classes.imageWheeleez}
+            src={wheeleez}
+            width="100%"
+          ></img>
+          <img
+            className={classes.imageAltium}
+            src={solidworks}
+            width="100%"
+          ></img>
+          <img className={classes.imageAltium} src={ansys} width="100%"></img>
+          <img
+            className={classes.imageSpark}
+            src={protocase}
+            width="100%"
+          ></img>
+          <img className={classes.imageAltium} src={altium} width="100%"></img>
+          <img className={classes.imageAltium} src={divvela} width="100%"></img>
+          <img
+            className={classes.imageAltium}
+            src={basicmicro}
+            width="100%"
+          ></img>
+          <img className={classes.imageAltium} src={omgvh} width="100%"></img>
         </Slider>
         <br />
         <br />
@@ -262,22 +290,11 @@ export default function SectionSponsorship(props) {
         <br />
         <br />
         <Slider {...settings}>
-          <Paper elevation={24} className={classes.sponsor}>
-            <img
-              className={classes.image}
-              src={unfynite}
-              style={{ width: "80%", margin: "auto", marginTop: "2vh" }}
-              width="100%"
-            ></img>
-          </Paper>
-          <Paper elevation={24} className={classes.sponsor}>
-            <img
-              className={classes.image}
-              src={monster}
-              style={{ marginTop: "7vh" }}
-              width="100%"
-            ></img>
-          </Paper>
+          <img src={unfynite} width="100%"></img>
+          <img className={classes.irobocom} src={irobocom} width="100%"></img>
+          <img className={classes.semikart} src={semikart} width="100%"></img>
+          <img className={classes.monster} src={monster} width="100%"></img>
+          <img src={srmpedia} width="100%"></img>
         </Slider>
         <Link
           className={classes.downvote}

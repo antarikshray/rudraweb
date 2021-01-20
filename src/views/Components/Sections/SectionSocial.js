@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import InstagramEmbed from 'react-instagram-embed';
 import { Parallax, Background } from 'react-parallax';
 import { Link, animateScroll as scroll } from "react-scroll";
 import { makeStyles } from '@material-ui/core/styles';
@@ -172,7 +171,7 @@ export default function SectionSocial(props) {
 
     return (
         <Parallax
-            blur={{ min: -70, max: 60 }}
+            blur={{ min: -50, max: 50 }}
             bgImage={bgImage}
             bgImageAlt="the cat"
             strength={1100}
@@ -181,13 +180,7 @@ export default function SectionSocial(props) {
                 <div className={classes.title}>Social</div>
                 <div className={classes.content}>
                     <Box className={classes.instagram}>
-                        <InstagramEmbed
-                            url='https://www.instagram.com/p/CDGXYApDLhB/'
-                            hideCaption={false}
-                            containerTagName='div'
-                            protocol=''
-                            injectScript
-                        />
+                        
                     </Box>
                     <Box className={classes.facebook}>
                         <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsrmteamrudra%2Fposts%2F2406254082726962%3A0&width=500"

@@ -73,7 +73,6 @@ import lochan from "assets/img/image/teams/team19/lochan.webp";
 import niket from "assets/img/image/teams/team19/niket.webp";
 import kriti from "assets/img/image/teams/team19/kriti.webp";
 import nikhil from "assets/img/image/teams/team19/nikil.webp";
-import nikita from "assets/img/image/teams/team19/nikita.webp";
 import harry from "assets/img/image/teams/team19/harry.webp";
 
 //team20
@@ -91,6 +90,7 @@ import nitesh from "assets/img/image/teams/team20/nitesh.webp";
 import hemangi from "assets/img/image/teams/team20/hemangi.webp";
 import lekha from "assets/img/image/teams/team20/lekha.webp";
 import aravind from "assets/img/image/teams/team20/aravind.webp";
+import nikita from "assets/img/image/teams/team19/nikita.webp";
 import ali from "assets/img/image/teams/team20/ali.webp";
 import tuhin from "assets/img/image/teams/team20/tuhin.webp";
 import antariksh from "assets/img/image/teams/team20/antariksh.webp";
@@ -102,8 +102,8 @@ import vishal from "assets/img/image/teams/team20/vishal.webp";
 import anirudh from "assets/img/image/teams/team20/anirudh.webp";
 import jordan from "assets/img/image/teams/team20/jordan.webp";
 import reshesh from "assets/img/image/teams/team20/reshesh.webp";
-import oishwarya from "assets/img/faces/user.png";
-import mayur from "assets/img/faces/user.png";
+import oishwarya from "assets/img/image/teams/team20/oishwarya.webp";
+import mayur from "assets/img/image/teams/team20/mayur.webp";
 import lokesh from "assets/img/image/teams/team20/lokesh.webp";
 
 //rovers
@@ -226,19 +226,24 @@ const profile = [
       image: aravind,
     },
     {
+      name: "Nikita Gupta",
+      designation: "Senior Controller Dev",
+      image: nikita,
+    },
+    {
       name: "Tuhin Sengupta",
       designation: "Senior Researcher",
       image: tuhin,
     },
     {
-      name: "Antariksh Ray",
-      designation: "Controller Dev",
-      image: antariksh,
-    },
-    {
       name: "Aishnya Shanvi",
       designation: "Embedded Dev",
       image: aishanya,
+    },
+    {
+      name: "Antariksh Ray",
+      designation: "Controller Dev",
+      image: antariksh,
     },
     {
       name: "Prateek",
@@ -251,6 +256,11 @@ const profile = [
       image: pawan,
     },
     {
+      name: "Anirudh",
+      designation: "Machine Vision Dev",
+      image: anirudh,
+    },
+    {
       name: "Anurup Mohanty",
       designation: "Astrobiologist",
       image: anurup,
@@ -259,11 +269,6 @@ const profile = [
       name: "Vishal",
       designation: "Geologist",
       image: vishal,
-    },
-    {
-      name: "Anirudh",
-      designation: "Machine Vision Dev",
-      image: anirudh,
     },
     {
       name: "Jordan Fernandez",

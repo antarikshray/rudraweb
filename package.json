@@ -1,5 +1,5 @@
 {
-  "homepage": "http://srmrudra.com",
+  "homepage": "https://srmrudra.com",
   "name": "teamrudra",
   "version": "1.8.0",
   "description": "team rudra website",
@@ -51,6 +51,7 @@
     "react-visibility-sensor": "^5.1.1",
     "save-dev": "^0.0.1-security",
     "slick-carousel": "^1.8.1",
+    "styled-components": "^5.2.1",
     "swiper": "^5.3.6",
     "webfontloader": "^1.6.28"
   },
@@ -73,7 +74,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b master -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint:check": "eslint . --ext=js,jsx;  exit 0",

@@ -344,7 +344,7 @@ export default function FullWidthGrid() {
       return (
         <React.Fragment>
           {contentRender()}
-          <DelayLink delay={1800} to="/landing-page" clickAction={() => {
+          <DelayLink delay={1800} to="/team-page" clickAction={() => {
           document.getElementById('load1').style.width = '50vw';
           document.getElementById('load2').style.height = '120vh';
           setTimeout(function () {
@@ -352,7 +352,7 @@ export default function FullWidthGrid() {
           }, 500);
         }}>
           <Button className={classes.Button} size='large'>
-            What Do We Do?
+            TEAM HISTORY
      </Button>
      </DelayLink>
         </React.Fragment>
@@ -378,7 +378,7 @@ export default function FullWidthGrid() {
 
   return (
     <Parallax
-      blur={{ min: -70, max: 50 }}
+      blur={{ min: -10, max: 20 }}
       bgImage={bgImageRender()}
       bgImageAlt="the cat"
       strength={1000}

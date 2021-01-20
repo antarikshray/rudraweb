@@ -263,9 +263,9 @@ export default function Homepage(props) {
         <section id='team'>
           <SectionTeam />
         </section>
-        <section id='social'>
+        {/* <section id='social'>
           <SectionSocial />
-        </section>
+        </section> */}
         <section id='sponsorship'>
           <SectionSponsorship />
         </section>
